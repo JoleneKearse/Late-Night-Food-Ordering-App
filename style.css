@@ -1,0 +1,23 @@
+/* RESET */
+html, body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #F5F5F5;
+  font-family: 'Rowdies', cursive;
+  font-size: clamp(.875rem, 1104.9474rem + -981.1088vw, 1.2rem);
+  font-weight: 400;
+  color: #000;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+/* TYPOGRAPHY */
