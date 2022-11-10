@@ -20,7 +20,7 @@ body {
   background-color: var(--clr-neutral-800);
   font-family: 'Rowdies', cursive;
   font-size: clamp(.875rem, 1104.9474rem + -981.1088vw, 1.2rem);
-  font-weight: 400;
+  font-weight: 300;
   color: var(--clr-neutral-800);
 }
 
@@ -49,19 +49,37 @@ body {
   align-items: center;
   margin: 0;
   padding: 0;
+  padding-top: -1px;
+  overflow: auto;
 }
 
 .container {
-  display: block;
   width: min(100%, 40em);
   margin: 0;
   margin: 0 auto;
+  padding-top: -1px;
   background-color: var(--clr-accent-100);
   overflow: auto;
 }
 
 header {
   height: 10em;
+  margin-top: 0;
+  padding: 1px;
   background-image: url("./images/background.png");
   background-position: center;
+}
+
+.menu-item {
+  display: grid;
+  align-items: center;
+  grid-template-areas: 
+  "img details controls"
+  "img details controls";
+  
+  gap: 1rem;
+}
+
+.menu-item:not(:first) {
+  margin-top: 1em;
 }

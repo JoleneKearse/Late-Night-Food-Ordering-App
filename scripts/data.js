@@ -1,4 +1,4 @@
-const menuArr = [
+export const menuArr = [
   {
     name: "Dumplings",
     id: 0,
@@ -52,3 +52,4 @@ const menuArr = [
     img: "https://img.icons8.com/office/80/null/beer-bottle.png",
   },
 ];
+
