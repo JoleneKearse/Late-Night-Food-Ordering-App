@@ -38,7 +38,7 @@ header {
 
 h1 {
   font-family: 'Faster One', cursive;
-  font-size: clamp(1.5rem, 0.0000rem + 6.6667vw, 3.5rem);
+  font-size: clamp(2rem, 0.8750rem + 5.0000vw, 3.5rem);
   letter-spacing: .5rem;
   color: var(--clr-accent);
 }
@@ -46,6 +46,14 @@ h1 {
 .tagline {
   display: inline;
   padding: .25rem;
+}
+
+.fa-plus {
+  padding: .35rem;
+}
+
+.tagline,
+.fa-plus {
   border-radius: .25rem;
   background-color: var(--clr-accent);
 }
@@ -57,7 +65,7 @@ body {
 }
 
 .container {
-  width: min(100%, 30em);
+  width: min(100%, 90em);
   margin: 0;
   margin: 0 auto;
   background-color: var(--clr-accent-100);
@@ -82,8 +90,7 @@ h1 {
   grid-template-areas: 
   "img details controls"
   "img details controls";
-  gap: 1rem;
-  width: 90%;
+  gap: .5rem;
   margin-inline: auto;
 }
 
@@ -96,5 +103,5 @@ h1 {
 }
 
 .menu-item-description {
-  width: 20em;
+  width: 60vw;
 }
