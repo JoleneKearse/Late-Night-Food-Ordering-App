@@ -7,14 +7,14 @@ const getMenuHtml = () => {
   menuArr.forEach((element) => {
     menuHtml += `
     <div class="menu-item">
-      <img src="${element.img}" alt="dumplings">
+      <img src="${element.img}" alt="dumplings" class="menu-img">
       <div class="menu-item-description">
         <h3>${element.name}</h3>
         <p>${element.description}</p>
       </div>
       <div class="menu-item-controls">
-        <i class="fa-solid fa-plus"></i>
-        <p class="price">${element.price}</p>
+        <i class="fa-solid fa-plus" data-id="${element.id}"></i>
+        <p class="price">$${element.price}</p>
       </div>
     </div>
     `;

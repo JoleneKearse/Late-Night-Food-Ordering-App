@@ -21,7 +21,7 @@ export const menuArr = [
     description:
       "Load up with a variety of pork, chicken, tofu and veggie skewers",
     price: 3,
-    img: "https://img.icons8.com/external-icongeek26-flat-icongeek26/64/null/external-dumplings-fine-dining-icongeek26-flat-icongeek26.png",
+    img: "https://img.icons8.com/external-smashingstocks-outline-color-smashing-stocks/66/null/external-skewers-food-and-drinks-smashingstocks-outline-color-smashing-stocks.png",
   },
   {
     name: "Ramen",
@@ -35,14 +35,14 @@ export const menuArr = [
     id: 4,
     description: "Filling buns full of cabbage and pork or chicken",
     price: 4,
-    img: "https://img.icons8.com/emoji/96/null/steaming-bowl-emoji.png",
+    img: "https://img.icons8.com/external-victoruler-flat-victoruler/64/null/external-baozi-chinese-new-year-victoruler-flat-victoruler.png",
   },
   {
     name: "Congee",
     id: 5,
     description: "THE Chinese soup of rice, veggies and shrimp",
     price: 4,
-    img: "https://img.icons8.com/emoji/96/null/steaming-bowl-emoji.png",
+    img: "https://img.icons8.com/color/96/null/soup-plate.png",
   },
   {
     name: "Beer",
@@ -52,4 +52,3 @@ export const menuArr = [
     img: "https://img.icons8.com/office/80/null/beer-bottle.png",
   },
 ];
-

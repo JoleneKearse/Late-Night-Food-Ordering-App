@@ -43,21 +43,23 @@ h1 {
   color: var(--clr-accent);
 }
 
+.tagline {
+  display: inline;
+  padding: .25rem;
+  border-radius: .25rem;
+  background-color: var(--clr-accent);
+}
+
 /* LAYOUT */
 body {
   display: grid;
   align-items: center;
-  margin: 0;
-  padding: 0;
-  padding-top: -1px;
-  overflow: auto;
 }
 
 .container {
-  width: min(100%, 40em);
+  width: min(100%, 30em);
   margin: 0;
   margin: 0 auto;
-  padding-top: -1px;
   background-color: var(--clr-accent-100);
   overflow: auto;
 }
@@ -70,16 +72,29 @@ header {
   background-position: center;
 }
 
+h1 {
+  margin-left: 1rem;
+}
+
 .menu-item {
   display: grid;
   align-items: center;
   grid-template-areas: 
   "img details controls"
   "img details controls";
-  
   gap: 1rem;
+  width: 90%;
+  margin-inline: auto;
 }
 
 .menu-item:not(:first) {
-  margin-top: 1em;
+  margin-top: 10em;
+}
+
+.menu-img {
+  width: 4em;
+}
+
+.menu-item-description {
+  width: 20em;
 }
