@@ -1,3 +1,14 @@
+/* CUSTOM PROPERTIES */
+:root {
+  --clr-accent-100: #FFEEB8;
+  --clr-accent: #e94610;
+  --clr-neutral-100: #ffffff;
+  --clr-neutral-300: #595959;
+  --clr-neutral-400: #333333;
+  --clr-neutral-800: #0d0d0d;
+  --clr-neutral-900: #000000;
+}
+
 /* RESET */
 html, body {
   margin: 0;
@@ -6,11 +17,11 @@ html, body {
 }
 
 body {
-  background-color: #F5F5F5;
+  background-color: var(--clr-neutral-800);
   font-family: 'Rowdies', cursive;
   font-size: clamp(.875rem, 1104.9474rem + -981.1088vw, 1.2rem);
   font-weight: 400;
-  color: #000;
+  color: var(--clr-neutral-800);
 }
 
 img {
@@ -21,3 +32,36 @@ img {
 }
 
 /* TYPOGRAPHY */
+header {
+  text-align: center;
+}
+
+h1 {
+  font-family: 'Faster One', cursive;
+  font-size: clamp(1.5rem, 0.0000rem + 6.6667vw, 3.5rem);
+  letter-spacing: .5rem;
+  color: var(--clr-accent);
+}
+
+/* LAYOUT */
+body {
+  display: grid;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  display: block;
+  width: min(100%, 40em);
+  margin: 0;
+  margin: 0 auto;
+  background-color: var(--clr-accent-100);
+  overflow: auto;
+}
+
+header {
+  height: 10em;
+  background-image: url("./images/background.png");
+  background-position: center;
+}
