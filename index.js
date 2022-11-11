@@ -29,7 +29,7 @@ const getMenuHtml = () => {
         <p>${element.description}</p>
       </div>
       <div class="menu-item-controls">
-        <i class="fa-solid fa-plus add-btn" data-id="${element.id}"></i>
+        <i class="fa-solid fa-plus add-btn" data-id="${element.id}" title="Add to cart"></i>
         <p class="price">$${element.price}</p>
       </div>
     </div>
@@ -40,7 +40,10 @@ const getMenuHtml = () => {
 
 const getOrderHtml = () => {
   // build the html
-  let orderDetailsHtml = "";
+  let orderDetailsHtml = `
+    <h2>Your Order</h2>
+  `;
+  let totalPrice = 0;
   orderArr.forEach((item) => {
     orderDetailsHtml += `
     <div class="order-items">
@@ -53,6 +56,13 @@ const getOrderHtml = () => {
     </div>
   `;
   });
+  orderArr.forEach((item) => {
+    totalPrice += Number(`${item.price}`);
+  });
+  orderDetailsHtml += `
+    <hr>
+    <p>Total<span class="total-price">$${totalPrice}</span></p>
+  `;
   return orderDetailsHtml;
 };
 

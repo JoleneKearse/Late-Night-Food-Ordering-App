@@ -66,6 +66,11 @@ h1 {
   background-color: var(--clr-accent);
 }
 
+h2 {
+  text-align: center;
+  color: var(--clr-accent);
+}
+
 /* LAYOUT */
 body {
   display: grid;

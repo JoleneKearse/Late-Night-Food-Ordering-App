@@ -48,7 +48,7 @@ export const menuArr = [
     name: "Beer",
     id: 6,
     description: "Big bottle to wash everything down",
-    price: 2.5,
+    price: 2,
     img: "https://img.icons8.com/office/80/null/beer-bottle.png",
   },
 ];
