@@ -7,6 +7,9 @@ document.addEventListener("click", (e) => {
   if (e.target.dataset.id) {
     handleAddClick(e.target.dataset.id);
   }
+  if (e.target.dataset.remove) {
+    console.log(e.target.dataset.remove);
+  }
 });
 
 // site functions
@@ -52,8 +55,8 @@ const getOrderHtml = () => {
         <div class="order-line">
           <div class="order-item-dets">
             <p>${item.name}</p>
-            <i class="fa-solid fa-plus add-btn" title="Add another!" aria-label="Add another!"></i>
-            <i class="fa-sharp fa-solid fa-delete-left delete-btn" title="Remove" aria-label="Remove item"></i>
+            <i class="fa-solid fa-plus add-btn" title="Add another!" aria-label="Add another!" data-addMore="${item.id}"></i>
+            <i class="fa-sharp fa-solid fa-delete-left delete-btn" title="Remove" aria-label="Remove item" data-remove="${item.id}"></i>
           </div>
           <p>$${item.price}</p>
         </li>
