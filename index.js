@@ -1,5 +1,9 @@
 import { menuArr } from "./scripts/data.js";
-import { handleAddClick } from "./scripts/utils.js";
+import {
+  handleAddClick,
+  orderedItems,
+  orderedPrices,
+} from "./scripts/utils.js";
 
 // site event listeners
 document.addEventListener("click", (e) => {
@@ -33,5 +37,11 @@ const getMenuHtml = () => {
 const renderMenu = () => {
   document.getElementById("menu").innerHTML = getMenuHtml();
 };
+
+const getOrderDetailsHtml = () => {
+  orderDetailsHtml += `
+    
+  `
+}
 
 renderMenu();
