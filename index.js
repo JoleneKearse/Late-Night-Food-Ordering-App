@@ -29,7 +29,7 @@ const getMenuHtml = () => {
         <p>${element.description}</p>
       </div>
       <div class="menu-item-controls">
-        <i class="fa-solid fa-plus add-btn" data-id="${element.id}" title="Add to cart"></i>
+        <i class="fa-solid fa-plus add-btn" data-id="${element.id}" title="Add to cart" aria-label="Add to cart"></i>
         <p class="price">$${element.price}</p>
       </div>
     </div>
@@ -49,9 +49,15 @@ const getOrderHtml = () => {
     <div class="order-items">
       <ul>
         <li>
-          <p>${item.name}</p>
-          <p>${item.price}</p>
+        <div class="order-line">
+          <div class="order-item-dets">
+            <p>${item.name}</p>
+            <i class="fa-solid fa-plus add-btn" title="Add another!" aria-label="Add another!"></i>
+            <i class="fa-sharp fa-solid fa-delete-left delete-btn" title="Remove" aria-label="Remove item"></i>
+          </div>
+          <p>$${item.price}</p>
         </li>
+        </div>
       </ul>
     </div>
   `;
@@ -60,8 +66,8 @@ const getOrderHtml = () => {
     totalPrice += Number(`${item.price}`);
   });
   orderDetailsHtml += `
-    <hr>
-    <p>Total<span class="total-price">$${totalPrice}</span></p>
+    <p class ="total">Total  <span class="total-price">$${totalPrice}</span></p>
+    <button class="order-btn">Place Order</button>
   `;
   return orderDetailsHtml;
 };
