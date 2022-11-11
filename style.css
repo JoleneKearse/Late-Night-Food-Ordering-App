@@ -40,7 +40,7 @@ header {
 
 h1 {
   font-family: 'Faster One', cursive;
-  font-size: clamp(2rem, 0.8750rem + 5.0000vw, 3.5rem);
+  font-size: clamp(2.5rem, 1.3750rem + 5.0000vw, 4rem);
   letter-spacing: .5rem;
   color: var(--clr-accent);
 }
@@ -114,7 +114,8 @@ hr {
 
 .order-btn:hover,
 .order-btn:focus {
-  background: linear-gradient(135deg, var(--clr-accent-900), var(--clr-accent), #D06100);
+  color: #FFFFA9;
+  background: linear-gradient(135deg, var(--clr-accent-900), #BD1A00,  #CC2900, #D93600, #E94610, var(--clr-accent), #F5521C, #FF5F29, #FF6C36, #FF804A);
 }
 
 /* LAYOUT */
@@ -132,7 +133,7 @@ body {
 }
 
 header {
-  height: 10em;
+  height: 12em;
   margin-top: 0;
   padding: 1px;
   background-image: url("./images/background.jpg");
