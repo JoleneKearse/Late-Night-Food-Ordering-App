@@ -8,7 +8,7 @@ document.addEventListener("click", (e) => {
     handleAddClick(e.target.dataset.id);
   }
   if (e.target.dataset.remove) {
-    console.log(e.target.dataset.remove);
+    handleDeleteClick(e.target.dataset.remove);
   }
 });
 
@@ -18,6 +18,20 @@ const handleAddClick = (itemId) => {
   const targetItemObj = menuArr.filter((item) => item.id === Number(itemId))[0];
   orderArr.push(targetItemObj);
   renderOrderDetails();
+};
+
+const handleDeleteClick = (itemId) => {
+  const targetOrderObj = orderArr.filter(
+    (item) => item.id === Number(itemId)
+  )[0];
+  // remove from orderArr
+  // find the index to use splice
+  const indexOfItemToBeRemoved = orderArr.indexOf(targetOrderObj);
+  console.log(indexOfItemToBeRemoved);
+  orderArr.splice(indexOfItemToBeRemoved, 1);
+  console.log(orderArr);
+  // TODO: Shows the correct item is being removed, need to update the orderDetailsHtml and totalPrice
+  // orderArr.
 };
 
 // generate content for menu section
