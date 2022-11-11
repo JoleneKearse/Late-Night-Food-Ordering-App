@@ -2,6 +2,7 @@
 :root {
   --clr-accent-100: #FFEEB8;
   --clr-accent: #e94610;
+  --clr-accent-900: #C52200;
   --clr-neutral-100: #ffffff;
   --clr-neutral-300: #595959;
   --clr-neutral-400: #333333;
@@ -52,6 +53,11 @@ h1 {
   padding: .35rem;
 }
 
+.fa-plus:hover,
+.fa-plus:focus {
+  background-color: var(--clr-accent-900);
+}
+
 .tagline,
 .fa-plus {
   border-radius: .25rem;
@@ -76,7 +82,7 @@ header {
   height: 10em;
   margin-top: 0;
   padding: 1px;
-  background-image: url("./images/background.png");
+  background-image: url("./images/background.jpg");
   background-position: center;
 }
 
@@ -91,7 +97,12 @@ h1 {
   "img details controls"
   "img details controls";
   gap: .5rem;
+  width: 95%;
   margin-inline: auto;
+}
+
+.menu-item:first-child {
+  margin-top: 1em;
 }
 
 .menu-item:not(:first) {
@@ -104,4 +115,13 @@ h1 {
 
 .menu-item-description {
   width: 60vw;
+}
+
+.menu-item-description h3 {
+  margin: 0;
+}
+
+.menu-item-description p {
+  margin-top: 0;
+
 }

@@ -1,13 +1,12 @@
 import { menuArr } from "./scripts/data.js";
 
-console.log(menuArr);
-// render content to menu section
+// generate content for menu section
 const getMenuHtml = () => {
   let menuHtml = "";
   menuArr.forEach((element) => {
     menuHtml += `
     <div class="menu-item">
-      <img src="${element.img}" alt="dumplings" class="menu-img">
+      <img src="${element.img}" alt="${element.name}" class="menu-img">
       <div class="menu-item-description">
         <h3>${element.name}</h3>
         <p>${element.description}</p>
@@ -22,6 +21,7 @@ const getMenuHtml = () => {
   return menuHtml;
 };
 
+// render menu to page
 const renderMenu = () => {
   document.getElementById("menu").innerHTML = getMenuHtml();
 };
