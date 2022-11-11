@@ -1,9 +1,6 @@
 import { menuArr } from "./scripts/data.js";
-import {
-  handleAddClick,
-  orderedItems,
-  orderedPrices,
-} from "./scripts/utils.js";
+
+const orderArr = [];
 
 // site event listeners
 document.addEventListener("click", (e) => {
@@ -11,6 +8,14 @@ document.addEventListener("click", (e) => {
     handleAddClick(e.target.dataset.id);
   }
 });
+
+// site functions
+const handleAddClick = (itemId) => {
+  // find obj in arr matching id
+  const targetItemObj = menuArr.filter((item) => item.id === Number(itemId))[0];
+  orderArr.push(targetItemObj);
+  renderOrderDetails();
+};
 
 // generate content for menu section
 const getMenuHtml = () => {
@@ -33,15 +38,31 @@ const getMenuHtml = () => {
   return menuHtml;
 };
 
-// render menu to page
+const getOrderHtml = () => {
+  // build the html
+  let orderDetailsHtml = "";
+  orderArr.forEach((item) => {
+    orderDetailsHtml += `
+    <div class="order-items">
+      <ul>
+        <li>
+          <p>${item.name}</p>
+          <p>${item.price}</p>
+        </li>
+      </ul>
+    </div>
+  `;
+  });
+  return orderDetailsHtml;
+};
+
+// render to page
 const renderMenu = () => {
   document.getElementById("menu").innerHTML = getMenuHtml();
 };
 
-const getOrderDetailsHtml = () => {
-  orderDetailsHtml += `
-    
-  `
-}
+const renderOrderDetails = () => {
+  document.getElementById("order-details").innerHTML = getOrderHtml();
+};
 
 renderMenu();
