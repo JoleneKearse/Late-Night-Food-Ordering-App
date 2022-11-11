@@ -1,4 +1,12 @@
 import { menuArr } from "./scripts/data.js";
+import { handleAddClick } from "./scripts/utils.js";
+
+// site event listeners
+document.addEventListener("click", (e) => {
+  if (e.target.dataset.id) {
+    handleAddClick(e.target.dataset.id);
+  }
+});
 
 // generate content for menu section
 const getMenuHtml = () => {
@@ -12,7 +20,7 @@ const getMenuHtml = () => {
         <p>${element.description}</p>
       </div>
       <div class="menu-item-controls">
-        <i class="fa-solid fa-plus" data-id="${element.id}"></i>
+        <i class="fa-solid fa-plus add-btn" data-id="${element.id}"></i>
         <p class="price">$${element.price}</p>
       </div>
     </div>
