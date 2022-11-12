@@ -1,6 +1,6 @@
 import { menuArr } from "./scripts/data.js";
 
-const orderArr = [];
+let orderArr = [];
 
 // site event listeners
 document.addEventListener("click", (e) => {
@@ -17,8 +17,16 @@ const handleAddClick = (itemId) => {
   // find obj in arr matching id
   const targetItemObj = menuArr.filter((item) => item.id === Number(itemId))[0];
   // increment numberOrdered property
-  targetItemObj.numberOrdered++;
-  orderArr.push(targetItemObj);
+  // targetItemObj.numberOrdered++;
+  // push to orderArr
+  // orderArr.push(targetItemObj);
+  // if already in orderArr, remove
+  if (targetItemObj.numberOrdered >= 1) {
+    targetItemObj.numberOrdered++;
+  } else if (!targetItemObj.numberOrdered) {
+    targetItemObj.numberOrdered++;
+    orderArr.push(targetItemObj);
+  }
   renderOrderDetails();
 };
 
@@ -26,15 +34,17 @@ const handleDeleteClick = (itemId) => {
   const targetOrderObj = orderArr.filter(
     (item) => item.id === Number(itemId)
   )[0];
-  // decrement numberOrdered property
-  targetOrderObj.numberOrdered--;
-  // remove from orderArr
-  // find the index to use splice
-  const indexOfItemToBeRemoved = orderArr.indexOf(targetOrderObj);
-  const updatedOrderArr = orderArr.splice(indexOfItemToBeRemoved, 1);
+
+  // remove from orderArr by finding index to splice
+  if (targetOrderObj.numberOrdered >= 1) {
+    targetOrderObj.numberOrdered--;
+  } else {
+    const indexOfItemToBeRemoved = orderArr.indexOf(targetOrderObj);
+    // TODO: do I need this variable?
+    const updatedOrderArr = orderArr.splice(indexOfItemToBeRemoved, 1);
+    orderArr = updatedOrderArr;
+  }
   renderOrderDetails();
-  // TODO: Shows the correct item is being removed, need to update the orderDetailsHtml and totalPrice
-  // orderArr.
 };
 
 // generate content for menu section
@@ -83,9 +93,14 @@ const getOrderHtml = () => {
     </div>
   `;
   });
+  // Calculate totalPrice
+  // TODO: if not on list add price, if on list and numberOrdered >= 1 times price and add total to totalPrice
   orderArr.map((item) => {
-    totalPrice += Number(`${item.price}`);
+    totalPrice += Number(`${item.numberOrdered}`) * Number(`${item.price}`);
   });
+  // orderArr.map((item) => {
+  //   totalPrice += Number(`${item.price}`);
+  // });
   orderDetailsHtml += `
     <p class ="total">Total  <span class="total-price">$${totalPrice}</span></p>
     <button class="order-btn">Place Order</button>
