@@ -16,11 +16,7 @@ document.addEventListener("click", (e) => {
 const handleAddClick = (itemId) => {
   // find obj in arr matching id
   const targetItemObj = menuArr.filter((item) => item.id === Number(itemId))[0];
-  // increment numberOrdered property
-  // targetItemObj.numberOrdered++;
-  // push to orderArr
-  // orderArr.push(targetItemObj);
-  // if already in orderArr, remove
+  // if already on list just increment otherwise add to bill
   if (targetItemObj.numberOrdered >= 1) {
     targetItemObj.numberOrdered++;
   } else if (!targetItemObj.numberOrdered) {
@@ -34,15 +30,12 @@ const handleDeleteClick = (itemId) => {
   const targetOrderObj = orderArr.filter(
     (item) => item.id === Number(itemId)
   )[0];
-
-  // remove from orderArr by finding index to splice
+  // if multiples decrement or else remove from orderArr by finding index to splice
   if (targetOrderObj.numberOrdered >= 1) {
     targetOrderObj.numberOrdered--;
   } else {
     const indexOfItemToBeRemoved = orderArr.indexOf(targetOrderObj);
-    // TODO: do I need this variable?
-    const updatedOrderArr = orderArr.splice(indexOfItemToBeRemoved, 1);
-    orderArr = updatedOrderArr;
+    orderArr = orderArr.splice(indexOfItemToBeRemoved, 1);
   }
   renderOrderDetails();
 };
