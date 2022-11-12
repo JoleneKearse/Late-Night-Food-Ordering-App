@@ -16,7 +16,7 @@ document.addEventListener("click", (e) => {
 const handleAddClick = (itemId) => {
   // find obj in arr matching id
   const targetItemObj = menuArr.filter((item) => item.id === Number(itemId))[0];
-  // if already on list just increment otherwise add to bill
+  // if already on list just increment, otherwise add to bill
   if (targetItemObj.numberOrdered >= 1) {
     targetItemObj.numberOrdered++;
   } else if (!targetItemObj.numberOrdered) {
@@ -33,7 +33,7 @@ const handleDeleteClick = (itemId) => {
   // if multiples decrement or else remove from orderArr by finding index to splice
   if (targetOrderObj.numberOrdered >= 1) {
     targetOrderObj.numberOrdered--;
-  } else {
+  } else if (targetOrderObj.numberOrdered === 0) {
     const indexOfItemToBeRemoved = orderArr.indexOf(targetOrderObj);
     orderArr = orderArr.splice(indexOfItemToBeRemoved, 1);
   }
