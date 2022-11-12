@@ -31,11 +31,17 @@ const handleDeleteClick = (itemId) => {
     (item) => item.id === Number(itemId)
   )[0];
   // if multiples decrement or else remove from orderArr by finding index to splice
-  if (targetOrderObj.numberOrdered >= 1) {
-    targetOrderObj.numberOrdered--;
-  } else if (targetOrderObj.numberOrdered === 0) {
+  targetOrderObj.numberOrdered--;
+  console.log(targetOrderObj);
+  // if (targetOrderObj.numberOrdered >= 1) {
+  //   targetOrderObj.numberOrdered--;
+  // } else
+  if (targetOrderObj.numberOrdered === 0) {
+    // TODO: This shows this as an object, because it is deleted, no longer there.
+    console.log(`item with 0: ${targetOrderObj}`);
     const indexOfItemToBeRemoved = orderArr.indexOf(targetOrderObj);
-    orderArr = orderArr.splice(indexOfItemToBeRemoved, 1);
+    orderArr = orderArr.splice(indexOfItemToBeRemoved);
+    console.log(`orderArr after delete: ${orderArr}`);
   }
   renderOrderDetails();
 };
@@ -76,10 +82,14 @@ const getOrderHtml = () => {
           <div class="order-item-dets">
             <p>${item.name}</p>
             <p class="number-ordered">x ${item.numberOrdered}</p>
-            <i class="fa-solid fa-plus add-btn" title="Add another!" aria-label="Add another!" data-addMore="${item.id}"></i>
-            <i class="fa-sharp fa-solid fa-delete-left delete-btn" title="Remove" aria-label="Remove item" data-remove="${item.id}"></i>
+            <i class="fa-solid fa-plus add-btn" title="Add another!" aria-label="Add another!" data-addMore="${
+              item.id
+            }"></i>
+            <i class="fa-sharp fa-solid fa-delete-left delete-btn" title="Remove" aria-label="Remove item" data-remove="${
+              item.id
+            }"></i>
           </div>
-          <p>$${item.price}</p>
+          <p>$${item.price * item.numberOrdered}</p>
         </li>
         </div>
       </ul>
