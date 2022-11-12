@@ -70,8 +70,8 @@ h2 {
   color: var(--clr-accent);
 }
 
-hr {
-  background-color: var(--clr-neutral-800);
+.number-ordered {
+  color: var(--clr-neutral-300);
 }
 
 .total {

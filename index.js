@@ -71,6 +71,7 @@ const getOrderHtml = () => {
         <div class="order-line">
           <div class="order-item-dets">
             <p>${item.name}</p>
+            <p class="number-ordered">x ${item.numberOrdered}</p>
             <i class="fa-solid fa-plus add-btn" title="Add another!" aria-label="Add another!" data-addMore="${item.id}"></i>
             <i class="fa-sharp fa-solid fa-delete-left delete-btn" title="Remove" aria-label="Remove item" data-remove="${item.id}"></i>
           </div>
