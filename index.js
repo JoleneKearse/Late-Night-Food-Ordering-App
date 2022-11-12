@@ -15,35 +15,40 @@ document.addEventListener("click", (e) => {
 // site functions
 const handleAddClick = (itemId) => {
   // find obj in arr matching id
-  const targetItemObj = menuArr.filter((item) => item.id === Number(itemId))[0];
+  const targetItemObj = menuArr.filter((item) => item.id === itemId)[0];
+  // TODO: This is no longer showing the object!
+  console.log(`clicked item: ${targetItemObj}`);
   // if already on list just increment, otherwise add to bill
   if (targetItemObj.numberOrdered >= 1) {
     targetItemObj.numberOrdered++;
   } else if (!targetItemObj.numberOrdered) {
     targetItemObj.numberOrdered++;
     orderArr.push(targetItemObj);
+    console.log(`added items: ${orderArr}`);
   }
   renderOrderDetails();
 };
 
 const handleDeleteClick = (itemId) => {
-  const targetOrderObj = orderArr.filter(
-    (item) => item.id === Number(itemId)
-  )[0];
+  console.log(itemId);
+  const newOrderArr = [...orderArr];
+  const targetItemObj = newOrderArr.filter((item) => item.id === itemId)[0];
   // if multiples decrement or else remove from orderArr by finding index to splice
-  targetOrderObj.numberOrdered--;
-  console.log(targetOrderObj);
-  // if (targetOrderObj.numberOrdered >= 1) {
-  //   targetOrderObj.numberOrdered--;
-  // } else
-  if (targetOrderObj.numberOrdered === 0) {
-    // TODO: This shows this as an object, because it is deleted, no longer there.
-    console.log(`item with 0: ${targetOrderObj}`);
-    const indexOfItemToBeRemoved = orderArr.indexOf(targetOrderObj);
-    orderArr = orderArr.splice(indexOfItemToBeRemoved);
-    console.log(`orderArr after delete: ${orderArr}`);
-  }
-  renderOrderDetails();
+  console.log(`target being applied to: ${targetItemObj}`);
+  // if (targetItemObj.numberOrdered === 1) {
+  //   targetItemObj.numberOrdered--;
+  //   // TODO: This shows this as an object, because it is deleted, no longer there.
+  //   console.log(`item with 0: ${targetItemObj}`);
+  //   const indexOfItemToBeRemoved = orderArr.indexOf(targetItemObj);
+  //   orderArr = orderArr.splice(indexOfItemToBeRemoved, 1);
+  //   console.log(`orderArr after delete: ${orderArr}`);
+  // } else if (targetItemObj.numberOrdered < 1) {
+  //   targetItemObj.numberOrdered--;
+  // } else {
+  //   const indexOfItemToBeRemoved = orderArr.indexOf(targetItemObj);
+  //   orderArr = orderArr.splice(indexOfItemToBeRemoved, 1);
+  // }
+  // renderOrderDetails();
 };
 
 // generate content for menu section
@@ -97,13 +102,9 @@ const getOrderHtml = () => {
   `;
   });
   // Calculate totalPrice
-  // TODO: if not on list add price, if on list and numberOrdered >= 1 times price and add total to totalPrice
   orderArr.map((item) => {
     totalPrice += Number(`${item.numberOrdered}`) * Number(`${item.price}`);
   });
-  // orderArr.map((item) => {
-  //   totalPrice += Number(`${item.price}`);
-  // });
   orderDetailsHtml += `
     <p class ="total">Total  <span class="total-price">$${totalPrice}</span></p>
     <button class="order-btn">Place Order</button>
@@ -117,7 +118,9 @@ const renderMenu = () => {
 };
 
 const renderOrderDetails = () => {
-  document.getElementById("order-details").innerHTML = getOrderHtml();
+  if (orderArr.length >= 1) {
+    document.getElementById("order-details").innerHTML = getOrderHtml();
+  }
 };
 
 renderMenu();
