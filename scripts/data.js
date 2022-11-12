@@ -6,6 +6,7 @@ export const menuArr = [
       "6 dumplings filled with ground pork and your choice of cabbage or corn",
     price: 8,
     img: "https://img.icons8.com/external-icongeek26-flat-icongeek26/64/null/external-dumplings-fine-dining-icongeek26-flat-icongeek26.png",
+    numberOrdered: 0,
   },
   {
     name: "Fried Noodles",
@@ -14,6 +15,7 @@ export const menuArr = [
       "Filling fried, greasy dish full of veggies, chicken and shrimp",
     price: 10,
     img: "https://img.icons8.com/external-photo3ideastudio-lineal-color-photo3ideastudio/64/null/external-noodles-china-photo3ideastudio-lineal-color-photo3ideastudio.png",
+    numberOrdered: 0,
   },
   {
     name: "BBQ Skewers",
@@ -22,6 +24,7 @@ export const menuArr = [
       "Load up with a variety of pork, chicken, tofu and veggie skewers",
     price: 3,
     img: "https://img.icons8.com/external-smashingstocks-outline-color-smashing-stocks/66/null/external-skewers-food-and-drinks-smashingstocks-outline-color-smashing-stocks.png",
+    numberOrdered: 0,
   },
   {
     name: "Ramen",
@@ -29,6 +32,7 @@ export const menuArr = [
     description: "Warming soup with veggies, noodles, and pork",
     price: 8,
     img: "https://img.icons8.com/emoji/96/null/steaming-bowl-emoji.png",
+    numberOrdered: 0,
   },
   {
     name: "Baozi",
@@ -36,6 +40,7 @@ export const menuArr = [
     description: "Filling buns full of cabbage and pork or chicken",
     price: 4,
     img: "https://img.icons8.com/external-victoruler-flat-victoruler/64/null/external-baozi-chinese-new-year-victoruler-flat-victoruler.png",
+    numberOrdered: 0,
   },
   {
     name: "Congee",
@@ -43,6 +48,7 @@ export const menuArr = [
     description: "THE Chinese soup of rice, veggies and shrimp",
     price: 4,
     img: "https://img.icons8.com/color/96/null/soup-plate.png",
+    numberOrdered: 0,
   },
   {
     name: "Beer",
@@ -50,5 +56,6 @@ export const menuArr = [
     description: "Big bottle to wash everything down",
     price: 2,
     img: "https://img.icons8.com/office/80/null/beer-bottle.png",
+    numberOrdered: 0,
   },
 ];

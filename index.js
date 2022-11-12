@@ -16,23 +16,25 @@ document.addEventListener("click", (e) => {
 const handleAddClick = (itemId) => {
   // find obj in arr matching id
   const targetItemObj = menuArr.filter((item) => item.id === Number(itemId))[0];
+  // increment numberOrdered property
+  targetItemObj.numberOrdered++;
   orderArr.push(targetItemObj);
   renderOrderDetails();
 };
 
-const handleDeleteClick = (itemId) => {
-  const targetOrderObj = orderArr.filter(
-    (item) => item.id === Number(itemId)
-  )[0];
-  // remove from orderArr
-  // find the index to use splice
-  const indexOfItemToBeRemoved = orderArr.indexOf(targetOrderObj);
-  console.log(indexOfItemToBeRemoved);
-  orderArr.splice(indexOfItemToBeRemoved, 1);
-  console.log(orderArr);
-  // TODO: Shows the correct item is being removed, need to update the orderDetailsHtml and totalPrice
-  // orderArr.
-};
+// const handleDeleteClick = (itemId) => {
+//   const targetOrderObj = orderArr.filter(
+//     (item) => item.id === Number(itemId)
+//   )[0];
+//   // remove from orderArr
+//   // find the index to use splice
+//   const indexOfItemToBeRemoved = orderArr.indexOf(targetOrderObj);
+//   console.log(indexOfItemToBeRemoved);
+//   const updatedOrderArr = orderArr.splice(indexOfItemToBeRemoved, 1);
+//   console.log(updatedOrderArr);
+//   // TODO: Shows the correct item is being removed, need to update the orderDetailsHtml and totalPrice
+//   // orderArr.
+// };
 
 // generate content for menu section
 const getMenuHtml = () => {
@@ -79,8 +81,11 @@ const getOrderHtml = () => {
     </div>
   `;
   });
-  orderArr.forEach((item) => {
+  // Calculate totalPrice
+  // use a hash table to included numberOrdered, give each a unique id?
+  orderArr.map((item, idx) => {
     totalPrice += Number(`${item.price}`);
+    console.log(`${idx}:${item.price}`);
   });
   orderDetailsHtml += `
     <p class ="total">Total  <span class="total-price">$${totalPrice}</span></p>
