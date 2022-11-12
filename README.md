@@ -9,23 +9,25 @@ Visit the **[Live site]()**!
    <img src="https://img.shields.io/badge/Font%20Awesome-528DD7.svg?style=for-the-badge&logo=Font-Awesome&logoColor=white" title="Font Awesome" alt="Font Awesome">
 </p>
 
-![screenshot]()
+![screenshot](screenshots/order-details.gif)
 
 I got the inspiration from **[Scrimba](https://scrimba.com/)**'s **Solo Project** to cap off their **Frontend Developer Career Path**'s **Module 5: Essential JavaScript**.
 
-![Requirements slide with project example]()
+![Requirements slide with project example](/screenshots/Scrimba-requirements.png)
 
 ## Table of Contents
 
-- [My Motivation]()
-- [MVP]()
-- [Design Choices]()
-- [My Process]()
-  - [Data]()
-  - [Data Attributes]()
-- [Resources]()
+- [My Motivation](https://github.com/JoleneKearse/Late-Night-Food-Ordering-App#my-motivation)
+- [MVP](https://github.com/JoleneKearse/Late-Night-Food-Ordering-App#mvp)
+- [Design Choices](https://github.com/JoleneKearse/Late-Night-Food-Ordering-App#design-choices)
+- [My Process](https://github.com/JoleneKearse/Late-Night-Food-Ordering-App#my-process)
+  - [Data](https://github.com/JoleneKearse/Late-Night-Food-Ordering-App#data)
+  - [Data Attributes](https://github.com/JoleneKearse/Late-Night-Food-Ordering-App#data-attributes)
+- [Resources](https://github.com/JoleneKearse/Late-Night-Food-Ordering-App#resources)
 
 ## My Motivation
+
+[contents](https://github.com/JoleneKearse/Late-Night-Food-Ordering-App#table-of-contents)
 
 It sounded cool, but I'm not really a hamburger kind of girl. 🍔 So I got to thinking... _'What kind of food would make me super excited?'_ 🤔
 
@@ -33,13 +35,15 @@ Well, I miss tons of things from living in China for 15 years... Especially stop
 
 China has restaurants everywhere and a vibrant late night food scene. Even food stalls on the side of streets open until 5 in the morning!
 
-![bbq skewers, dumplings, fried noodles]()
+![bbq skewers, dumplings, fried noodles](/screenshots/street-food.png)
 
 But what about those times you just want to head home with tasty treats? 🥡
 
 In comes my app! 📱 When you're close to home, simply place your order, get into your comfies, and have your late night snack brought to your door!
 
 ## MVP
+
+[contents](https://github.com/JoleneKearse/Late-Night-Food-Ordering-App#table-of-contents)
 
 I had already thrown out the **design spec**, but there were certain things I felt were push haves:
 
@@ -53,6 +57,8 @@ I had already thrown out the **design spec**, but there were certain things I fe
 - Payment Modal
 
 ## Design Choices
+
+[contents](https://github.com/JoleneKearse/Late-Night-Food-Ordering-App#table-of-contents)
 
 Of course this was the most difficult part! 🤣 First up I choose the food images.
 
@@ -68,19 +74,27 @@ I also went through multiple **header** images. One where I took my **accent col
 
 ## My Process
 
+[contents](https://github.com/JoleneKearse/Late-Night-Food-Ordering-App#table-of-contents)
+
 After cracking the **design process**, which I absolutely love ❤️, but can certainly take up time, I was ready to go! 🏎️
 
 1. ### Data
 
+[contents](https://github.com/JoleneKearse/Late-Night-Food-Ordering-App#table-of-contents)
+
 After, of course, setting up the HTML, this was my first stop. I had to consider which menu items to include. Then which properties I'd add.
 
-![data.js file with Menu Array showing which properties and keys I chose, including name, id, description, price, image, and numberOrdered]()
+![data.js file with Menu Array showing which properties and keys I chose, including name, id, description, price, image, and numberOrdered](/screenshots/data.png)
 
 > The numberOrdered property came later, when I considered the logic behind allowing a customer to order more than one of a menu item.
 
 2. ### Data Attributes
 
+[contents](https://github.com/JoleneKearse/Late-Night-Food-Ordering-App#table-of-contents)
+
 ## Resources
+
+[contents](https://github.com/JoleneKearse/Late-Night-Food-Ordering-App#table-of-contents)
 
 - [Icons8](https://icons8.com/) for small my food icons
 - ['Faster One' Google Font](https://fonts.google.com/specimen/Faster+One?query=faster+one)
