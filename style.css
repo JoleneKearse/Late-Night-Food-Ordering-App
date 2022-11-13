@@ -210,6 +210,10 @@ h1 {
   gap: .5rem;
 }
 
+.hidden {
+  display: none;
+}
+
 #payment-modal {
   position: fixed;
   z-index: 1;
