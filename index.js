@@ -1,8 +1,15 @@
 import { menuArr } from "./scripts/data.js";
 
 let orderArr = [];
+const orderSubmit = document.getElementById("order-details");
+
+const renderPaymentModal = (e) => {
+  e.preventDefault();
+  document.getElementById("payment-modal").innerHTML = getPaymentHtml();
+};
 
 // site event listeners
+
 document.addEventListener("click", (e) => {
   if (e.target.dataset.id) {
     handleAddClick(e.target.dataset.id);
@@ -14,6 +21,8 @@ document.addEventListener("click", (e) => {
     handleAddClick(e.target.dataset.add);
   }
 });
+
+orderSubmit.addEventListener("submit", renderPaymentModal);
 
 // site functions
 const handleAddClick = (itemId) => {
@@ -39,7 +48,7 @@ const handleDeleteClick = (itemId) => {
   renderOrderDetails();
 };
 
-// generate content for menu section
+// generate dynamic content
 const getMenuHtml = () => {
   let menuHtml = "";
   menuArr.forEach((element) => {
@@ -98,6 +107,15 @@ const getOrderHtml = () => {
     <button class="order-btn" title="Order your yummy treats!" aria-label="Place order">Place Order</button>
   `;
   return orderDetailsHtml;
+};
+
+const getPaymentHtml = () => {
+  let paymentHtml = `
+    <h3>Pay via WeChat</h3>
+    <p class="instructions">Open your app and scan the QR Code to process your payment.</p>
+    <img src="images/QRcode.png" alt="QR Code" class="QRcode">
+  `;
+  return paymentHtml;
 };
 
 // render to page

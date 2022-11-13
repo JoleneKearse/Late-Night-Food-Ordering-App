@@ -34,7 +34,8 @@ img {
 }
 
 /* TYPOGRAPHY */
-header {
+header,
+#payment-modal {
   text-align: center;
 }
 
@@ -204,4 +205,15 @@ h1 {
   justify-content: flex-start;
   align-items: center;
   gap: .5rem;
+}
+
+#payment-modal {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.QRcode {
+  width: 7em;
 }
