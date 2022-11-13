@@ -30,7 +30,7 @@ const handleDeleteClick = (itemId) => {
   const targetItemObj = newOrderArr.filter((item) => item.id == itemId)[0];
   console.log(targetItemObj);
   // if multiples decrement or else remove from orderArr by finding index to splice
-  if (targetItemObj.numberOrdered == 1) {
+  if (targetItemObj.numberOrdered == 1 || targetItemObj.numberOrdered == 0) {
     const indexOfItemToBeRemoved = orderArr.indexOf(targetItemObj);
     orderArr.splice(indexOfItemToBeRemoved, 1);
   }
@@ -105,8 +105,11 @@ const renderMenu = () => {
 };
 
 const renderOrderDetails = () => {
+  // display if orderArr has items in it, else remove from display
   if (orderArr.length >= 1) {
     document.getElementById("order-details").innerHTML = getOrderHtml();
+  } else if (orderArr.length == 0) {
+    document.getElementById("order-details").innerHTML = "";
   }
 };
 
