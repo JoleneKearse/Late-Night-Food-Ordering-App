@@ -7,32 +7,27 @@ document.addEventListener("click", (e) => {
   if (e.target.dataset.id) {
     handleAddClick(e.target.dataset.id);
   }
-  if (e.target.dataset.remove) {
-    handleDeleteClick(e.target.dataset.remove);
-  }
+  // if (e.target.dataset.remove) {
+  //   handleDeleteClick(e.target.dataset.remove);
+  // }
 });
 
 // site functions
 const handleAddClick = (itemId) => {
-  // find obj in arr matching id
-  const targetItemObj = menuArr.filter((item) => item.id === itemId)[0];
-  // TODO: This is no longer showing the object!
-  console.log(`clicked item: ${targetItemObj}`);
-  // if already on list just increment, otherwise add to bill
-  if (targetItemObj.numberOrdered >= 1) {
-    targetItemObj.numberOrdered++;
-  } else if (!targetItemObj.numberOrdered) {
-    targetItemObj.numberOrdered++;
+  // find obj in arr matching id, use == as it changes from a number
+  const targetItemObj = menuArr.filter((item) => item.id == itemId)[0];
+  // add to bill if not already there
+  if (!orderArr.includes(targetItemObj)) {
     orderArr.push(targetItemObj);
-    console.log(`added items: ${orderArr}`);
   }
+  // increment numberOrdered
+  targetItemObj.numberOrdered++;
   renderOrderDetails();
 };
 
 const handleDeleteClick = (itemId) => {
-  console.log(itemId);
   const newOrderArr = [...orderArr];
-  const targetItemObj = newOrderArr.filter((item) => item.id === itemId)[0];
+  const targetItemObj = newOrderArr.filter((item) => item.id == itemId)[0];
   // if multiples decrement or else remove from orderArr by finding index to splice
   console.log(`target being applied to: ${targetItemObj}`);
   // if (targetItemObj.numberOrdered === 1) {

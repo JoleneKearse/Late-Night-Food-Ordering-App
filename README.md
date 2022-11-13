@@ -161,6 +161,12 @@ ii. I set up the **click event listener** to listen for a click on that particul
 
 > I experimented with placing the site functions in another file, but found it was much easier to keep them in `index.js` if only for the global `orderArr` variable.
 
+This function gets called whenever the customer clicks the Add Button, as seen above on _line 8_.
+
+i. It uses `.filter()` to search for the matching item's `id` in `menuArr`, and returns it as an object.
+
+ii.
+
 ## Resources
 
 [contents](https://github.com/JoleneKearse/Late-Night-Food-Ordering-App#table-of-contents)
