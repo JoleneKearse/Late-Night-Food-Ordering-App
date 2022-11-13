@@ -7,9 +7,9 @@ document.addEventListener("click", (e) => {
   if (e.target.dataset.id) {
     handleAddClick(e.target.dataset.id);
   }
-  // if (e.target.dataset.remove) {
-  //   handleDeleteClick(e.target.dataset.remove);
-  // }
+  if (e.target.dataset.remove) {
+    handleDeleteClick(e.target.dataset.remove);
+  }
 });
 
 // site functions
@@ -28,22 +28,14 @@ const handleAddClick = (itemId) => {
 const handleDeleteClick = (itemId) => {
   const newOrderArr = [...orderArr];
   const targetItemObj = newOrderArr.filter((item) => item.id == itemId)[0];
+  console.log(targetItemObj);
   // if multiples decrement or else remove from orderArr by finding index to splice
-  console.log(`target being applied to: ${targetItemObj}`);
-  // if (targetItemObj.numberOrdered === 1) {
-  //   targetItemObj.numberOrdered--;
-  //   // TODO: This shows this as an object, because it is deleted, no longer there.
-  //   console.log(`item with 0: ${targetItemObj}`);
-  //   const indexOfItemToBeRemoved = orderArr.indexOf(targetItemObj);
-  //   orderArr = orderArr.splice(indexOfItemToBeRemoved, 1);
-  //   console.log(`orderArr after delete: ${orderArr}`);
-  // } else if (targetItemObj.numberOrdered < 1) {
-  //   targetItemObj.numberOrdered--;
-  // } else {
-  //   const indexOfItemToBeRemoved = orderArr.indexOf(targetItemObj);
-  //   orderArr = orderArr.splice(indexOfItemToBeRemoved, 1);
-  // }
-  // renderOrderDetails();
+  if (targetItemObj.numberOrdered == 1) {
+    const indexOfItemToBeRemoved = orderArr.indexOf(targetItemObj);
+    orderArr.splice(indexOfItemToBeRemoved, 1);
+  }
+  targetItemObj.numberOrdered--;
+  renderOrderDetails();
 };
 
 // generate content for menu section
