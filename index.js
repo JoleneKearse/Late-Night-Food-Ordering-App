@@ -92,7 +92,7 @@ const getOrderHtml = () => {
   });
   orderDetailsHtml += `
     <p class ="total">Total  <span class="total-price">$${totalPrice}</span></p>
-    <button class="order-btn">Place Order</button>
+    <button class="order-btn" title="Order your yummy treats!" aria-label="Place order">Place Order</button>
   `;
   return orderDetailsHtml;
 };
