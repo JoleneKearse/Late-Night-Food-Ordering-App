@@ -28,7 +28,6 @@ const handleAddClick = (itemId) => {
 const handleDeleteClick = (itemId) => {
   const newOrderArr = [...orderArr];
   const targetItemObj = newOrderArr.filter((item) => item.id == itemId)[0];
-  console.log(targetItemObj);
   // if multiples decrement or else remove from orderArr by finding index to splice
   if (targetItemObj.numberOrdered == 1 || targetItemObj.numberOrdered == 0) {
     const indexOfItemToBeRemoved = orderArr.indexOf(targetItemObj);
