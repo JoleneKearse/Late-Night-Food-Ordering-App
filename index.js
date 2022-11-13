@@ -2,10 +2,12 @@ import { menuArr } from "./scripts/data.js";
 
 let orderArr = [];
 const orderSubmit = document.getElementById("order-details");
+const paymentModal = document.getElementById("payment-modal");
 
 const renderPaymentModal = (e) => {
   e.preventDefault();
-  document.getElementById("payment-modal").innerHTML = getPaymentHtml();
+  paymentModal.classList.remove("hidden");
+  paymentModal.innerHTML = getPaymentHtml();
 };
 
 // site event listeners
