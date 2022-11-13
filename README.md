@@ -24,10 +24,10 @@ I got the inspiration from **[Scrimba](https://scrimba.com/)**'s **Solo Project*
 - [Design Choices](https://github.com/JoleneKearse/Late-Night-Food-Ordering-App#design-choices)
 - [My Process](https://github.com/JoleneKearse/Late-Night-Food-Ordering-App#my-process)
   - [Data](https://github.com/JoleneKearse/Late-Night-Food-Ordering-App#data)
-  - [Set up the Header]()
-  - [Generate the Menu via JavaScript]()
+  - [Set up the Header](https://github.com/JoleneKearse/Late-Night-Food-Ordering-App#set-up-the-header)
+  - [Generate the Menu via JavaScript](https://github.com/JoleneKearse/Late-Night-Food-Ordering-App#generate-the-menu-via-javascript)
   - [Data Attributes](https://github.com/JoleneKearse/Late-Night-Food-Ordering-App#data-attributes)
-  - [Function: `handleAddClick`]()
+  - [Function: `handleAddClick`](https://github.com/JoleneKearse/Late-Night-Food-Ordering-App#function-handleaddclick)
 - [Resources](https://github.com/JoleneKearse/Late-Night-Food-Ordering-App#resources)
 
 ## My Motivation
