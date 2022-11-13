@@ -127,7 +127,7 @@ body {
 .container {
   width: min(100%, 90em);
   margin: 0;
-  margin: 0 auto;
+  margin-inline: auto;
   background-color: var(--clr-accent-100);
   overflow: auto;
 }
