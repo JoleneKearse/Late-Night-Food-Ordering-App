@@ -111,9 +111,11 @@ const getOrderHtml = () => {
 
 const getPaymentHtml = () => {
   let paymentHtml = `
-    <h3>Pay via WeChat</h3>
-    <p class="instructions">Open your app and scan the QR Code to process your payment.</p>
-    <img src="images/QRcode.png" alt="QR Code" class="QRcode">
+    <div class="payment-modal-display">
+      <h3>Pay via WeChat</h3>
+      <p class="instructions">Open your app and scan the QR Code to process your payment.</p>
+      <img src="images/QRcode.png" alt="QR Code" class="QRcode">
+    </div>
   `;
   return paymentHtml;
 };

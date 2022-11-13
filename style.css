@@ -24,6 +24,7 @@ body {
   font-size: clamp(.875rem, 1104.9474rem + -981.1088vw, 1.2rem);
   font-weight: 300;
   color: var(--clr-neutral-800);
+  color-scheme: light dark;
 }
 
 img {
@@ -79,7 +80,8 @@ h2 {
   text-align: center;
 }
 
-.total-price {
+.total-price,
+h3 {
   font-weight: 400;
   color: var(--clr-accent);
 }
@@ -95,7 +97,8 @@ h2 {
 /* border radius */
 .tagline,
 .fa-plus,
-.order-btn {
+.order-btn,
+#payment-modal {
   border-radius: .25rem;
 }
 
@@ -208,6 +211,22 @@ h1 {
 }
 
 #payment-modal {
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 30%;
+  margin: auto;
+  padding: .5em;
+  height: fit-content;
+  width: 80%;
+  background-color: #333333F2;
+  color: var(--clr-neutral-100);
+  box-shadow: 3px 5px 15px var(--clr-neutral-800);
+}
+
+.payment-modal-display {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -216,4 +235,5 @@ h1 {
 
 .QRcode {
   width: 7em;
+  margin-bottom: 2em;
 }
