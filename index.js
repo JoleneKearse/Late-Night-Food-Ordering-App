@@ -112,14 +112,34 @@ const getOrderHtml = () => {
 };
 
 const getPaymentHtml = () => {
-  let paymentHtml = `
+  const mediaQuery = window.matchMedia("(min-width: 768px)");
+  if (mediaQuery.matches) {
+    let paymentHtml = `
     <div class="payment-modal-display">
       <h3>Pay via WeChat</h3>
       <p class="instructions">Open your app and scan the QR Code to process your payment.</p>
       <img src="images/QRcode.png" alt="QR Code" class="QRcode">
     </div>
+    `;
+    return paymentHtml;
+  } else {
+    let paymentHtml = `
+    <div class="payment-modal-display">
+          <h3>Pay via WeChat</h3>
+          <p class="instructions">Please enter your password.</p>
+          <img src="images/wechat-app-icon.png" alt="QR Code" class="pay-icon">
+          <div class="password">
+            <input type="number" name="password" id="password-input">
+            <input type="number" name="password" id="password-input">
+            <input type="number" name="password" id="password-input">
+            <input type="number" name="password" id="password-input">
+            <input type="number" name="password" id="password-input">
+            <input type="number" name="password" id="password-input">
+          </div>
+        </div>
   `;
   return paymentHtml;
+  };
 };
 
 // render to page

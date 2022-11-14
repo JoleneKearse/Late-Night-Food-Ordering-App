@@ -11,7 +11,7 @@
 }
 
 /* RESET */
-html, body, ul, button {
+html, body, ul, button, input {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -36,7 +36,8 @@ img {
 
 /* TYPOGRAPHY */
 header,
-#payment-modal {
+#payment-modal,
+#password-input {
   text-align: center;
 }
 
@@ -214,6 +215,8 @@ h1 {
   display: none;
 }
 
+/* COMPONENTS */
+
 #payment-modal {
   position: fixed;
   z-index: 1;
@@ -240,4 +243,24 @@ h1 {
 .QRcode {
   width: 7em;
   margin-bottom: 2em;
+}
+
+/* mobile */
+.pay-icon {
+  width: 2em;
+  margin-bottom: 1em;
+}
+
+.password {
+  display: flex;
+  gap: .5em;
+}
+
+#password-input {
+  width: 1.5em;
+  aspect-ratio: 1;
+  margin-bottom: 2em;
+  color: var(--clr-neutral-800);
+  background-color: var(--clr-accent-100);
+  border: var(--clr-neutral-800);
 }
