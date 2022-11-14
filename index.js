@@ -4,6 +4,7 @@ let orderArr = [];
 const orderSubmit = document.getElementById("order-details");
 const paymentModal = document.getElementById("payment-modal");
 
+// site function that couldn't be hoisted for mysterious reasons
 const renderPaymentModal = (e) => {
   e.preventDefault();
   paymentModal.classList.remove("hidden");
@@ -11,7 +12,6 @@ const renderPaymentModal = (e) => {
 };
 
 // site event listeners
-
 document.addEventListener("click", (e) => {
   if (e.target.dataset.id) {
     handleAddClick(e.target.dataset.id);
@@ -112,6 +112,12 @@ const getOrderHtml = () => {
 };
 
 const getPaymentHtml = () => {
+  // automove focus for password input
+  // function moveFocus(current, next) {
+  //   if (current.value.length === current.maxLength) {
+  //     document.getElementById(next).focus();
+  //   }
+  // }
   const mediaQuery = window.matchMedia("(min-width: 768px)");
   if (mediaQuery.matches) {
     let paymentHtml = `
@@ -129,12 +135,12 @@ const getPaymentHtml = () => {
       <p class="instructions">Please enter your password.</p>
       <img src="images/wechat-app-icon.png" alt="QR Code" class="pay-icon">
       <div class="password">
-        <input inputmode="numeric" name="password" id="password-input" min="0" max="9" required>
-        <input inputmode="numeric" name="password" id="password-input" min="0" max="9" required>
-        <input inputmode="numeric" name="password" id="password-input" min="0" max="9" required>
-        <input inputmode="numeric" name="password" id="password-input" min="0" max="9" required>
-        <input inputmode="numeric" name="password" id="password-input" min="0" max="9" required>
-        <input inputmode="numeric" name="password" id="password-input" min="0" max="9" required>
+        <input inputmode="numeric" name="password" class="password-input" id="one" min="0" max="9" pattern="\d" onkeyup="moveFocus(this, 'two')" required>
+        <input inputmode="numeric" name="password" class="password-input" id="two" min="0" max="9" pattern="\d" onkeyup="moveFocus(this, 'three')" required>
+        <input inputmode="numeric" name="password" class="password-input" id="three" min="0" max="9" pattern="\d" onkeyup="moveFocus(this, 'four')" required>
+        <input inputmode="numeric" name="password" class="password-input" id="four" min="0" max="9" pattern="\d" onkeyup="moveFocus(this, 'five')" required>
+        <input inputmode="numeric" name="password" class="password-input" id="five" min="0" max="9" pattern="\d" onkeyup="moveFocus(this, 'six')" required>
+        <input inputmode="numeric" name="password" class="password-input" id="six" min="0" max="9" pattern="\d" required>
       </div>
     </div>
   `;
