@@ -113,11 +113,11 @@ const getOrderHtml = () => {
 
 const getPaymentHtml = () => {
   // automove focus for password input
-  // function moveFocus(current, next) {
-  //   if (current.value.length === current.maxLength) {
-  //     document.getElementById(next).focus();
-  //   }
-  // }
+  function moveFocus(current, next) {
+    if (current.value.length === current.maxLength) {
+      document.getElementById(next).focus();
+    }
+  }
   const mediaQuery = window.matchMedia("(min-width: 768px)");
   if (mediaQuery.matches) {
     let paymentHtml = `
