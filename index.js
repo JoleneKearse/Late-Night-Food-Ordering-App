@@ -129,12 +129,12 @@ const getPaymentHtml = () => {
       <p class="instructions">Please enter your password.</p>
       <img src="images/wechat-app-icon.png" alt="QR Code" class="pay-icon">
       <div class="password">
-        <input type="number" name="password" id="password-input" min="0" max="9" required>
-        <input type="number" name="password" id="password-input" min="0" max="9" required>
-        <input type="number" name="password" id="password-input" min="0" max="9" required>
-        <input type="number" name="password" id="password-input" min="0" max="9" required>
-        <input type="number" name="password" id="password-input" min="0" max="9" required>
-        <input type="number" name="password" id="password-input">
+        <input inputmode="numeric" name="password" id="password-input" min="0" max="9" required>
+        <input inputmode="numeric" name="password" id="password-input" min="0" max="9" required>
+        <input inputmode="numeric" name="password" id="password-input" min="0" max="9" required>
+        <input inputmode="numeric" name="password" id="password-input" min="0" max="9" required>
+        <input inputmode="numeric" name="password" id="password-input" min="0" max="9" required>
+        <input inputmode="numeric" name="password" id="password-input" min="0" max="9" required>
       </div>
     </div>
   `;
