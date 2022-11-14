@@ -125,21 +125,21 @@ const getPaymentHtml = () => {
   } else {
     let paymentHtml = `
     <div class="payment-modal-display">
-          <h3>Pay via WeChat</h3>
-          <p class="instructions">Please enter your password.</p>
-          <img src="images/wechat-app-icon.png" alt="QR Code" class="pay-icon">
-          <div class="password">
-            <input type="number" name="password" id="password-input">
-            <input type="number" name="password" id="password-input">
-            <input type="number" name="password" id="password-input">
-            <input type="number" name="password" id="password-input">
-            <input type="number" name="password" id="password-input">
-            <input type="number" name="password" id="password-input">
-          </div>
-        </div>
+      <h3>Pay via WeChat</h3>
+      <p class="instructions">Please enter your password.</p>
+      <img src="images/wechat-app-icon.png" alt="QR Code" class="pay-icon">
+      <div class="password">
+        <input type="number" name="password" id="password-input" min="0" max="9" required>
+        <input type="number" name="password" id="password-input" min="0" max="9" required>
+        <input type="number" name="password" id="password-input" min="0" max="9" required>
+        <input type="number" name="password" id="password-input" min="0" max="9" required>
+        <input type="number" name="password" id="password-input" min="0" max="9" required>
+        <input type="number" name="password" id="password-input passport-last-input">
+      </div>
+    </div>
   `;
-  return paymentHtml;
-  };
+    return paymentHtml;
+  }
 };
 
 // render to page

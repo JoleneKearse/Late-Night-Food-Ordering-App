@@ -173,3 +173,4 @@ ii.
 
 - [Icons8](https://icons8.com/) for small my food icons
 - ['Faster One' Google Font](https://fonts.google.com/specimen/Faster+One?query=faster+one)
+- [Working with JavaScript Media Queries](https://css-tricks.com/working-with-javascript-media-queries/)
