@@ -127,6 +127,7 @@ h3 {
 body {
   display: grid;
   align-items: center;
+  background-color: var(--clr-neutral-400);
 }
 
 .container {
@@ -151,10 +152,12 @@ h1 {
 
 .menu-item {
   display: grid;
+  justify-content: start;
   align-items: center;
   grid-template-areas: 
   "img details controls"
   "img details controls";
+  grid-template-columns: 2fr 70% 1fr;
   gap: .5rem;
   width: 95%;
   margin-inline: auto;
@@ -173,7 +176,7 @@ h1 {
 }
 
 .menu-item-description {
-  width: 60vw;
+  width: 100%;
 }
 
 .menu-item-description h3 {
@@ -263,4 +266,18 @@ h1 {
   color: var(--clr-neutral-800);
   background-color: var(--clr-accent-100);
   border: var(--clr-neutral-800);
+}
+
+/* Media Queries */
+
+@media (min-width: 768px) {
+  .container {
+    width: 30em;
+  }
+  header {
+    height: 15em;
+  }
+  #payment-modal {
+    width: 20em;
+  }
 }
