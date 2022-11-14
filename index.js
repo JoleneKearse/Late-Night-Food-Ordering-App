@@ -134,7 +134,7 @@ const getPaymentHtml = () => {
         <input type="number" name="password" id="password-input" min="0" max="9" required>
         <input type="number" name="password" id="password-input" min="0" max="9" required>
         <input type="number" name="password" id="password-input" min="0" max="9" required>
-        <input type="number" name="password" id="password-input passport-last-input">
+        <input type="number" name="password" id="password-input">
       </div>
     </div>
   `;
