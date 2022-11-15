@@ -21,15 +21,16 @@ I got the inspiration from **[Scrimba](https://scrimba.com/)**'s **Solo Project*
 
 ## 📜 Table of Contents
 
-- [💪 My Motivation](https://github.com/JoleneKearse/Late-Night-Food-Ordering-App#my-motivation)
-- [🎯 MVP](https://github.com/JoleneKearse/Late-Night-Food-Ordering-App#mvp)
-- [🎨 Design Choices](https://github.com/JoleneKearse/Late-Night-Food-Ordering-App#design-choices)
-- [🔄 My Process](https://github.com/JoleneKearse/Late-Night-Food-Ordering-App#my-process)
-  - [Memory Challengers 🧠]()
-    - [Collapsing Margins]()
-    - [Variables Can Help Us!]()
-    - [Data Attributes]()
-- [🔖 Resources](https://github.com/JoleneKearse/Late-Night-Food-Ordering-App#resources)
+- [💪 My Motivation](https://github.com/JoleneKearse/Late-Night-Food-Ordering-App#-my-motivation)
+- [🎯 MVP](https://github.com/JoleneKearse/Late-Night-Food-Ordering-App#-mvp)
+- [✨ My Stretch Goals](https://github.com/JoleneKearse/Late-Night-Food-Ordering-App#-my-stretch-goals)
+- [🎨 Design Choices](https://github.com/JoleneKearse/Late-Night-Food-Ordering-App#-design-choices)
+- [🔄 My Process](https://github.com/JoleneKearse/Late-Night-Food-Ordering-App#-my-process)
+  - [Memory Challenges 🧠](https://github.com/JoleneKearse/Late-Night-Food-Ordering-App#memory-challenges-)
+    - [Collapsing Margins](https://github.com/JoleneKearse/Late-Night-Food-Ordering-App#collapsing-margins)
+    - [Variables Can Help Us!](https://github.com/JoleneKearse/Late-Night-Food-Ordering-App#variables-can-help-us)
+    - [Data Attributes](https://github.com/JoleneKearse/Late-Night-Food-Ordering-App#data-attributes)
+- [🔖 Resources](https://github.com/JoleneKearse/Late-Night-Food-Ordering-App#-resources)
 
 <hr>
 
@@ -175,6 +176,6 @@ I then set up the **click event listener** to listen for a click on that particu
 
 [Back to Table of Contents](https://github.com/JoleneKearse/Late-Night-Food-Ordering-App#table-of-contents)
 
-- [Icons8](https://icons8.com/) for small my food icons
+- [Icons8](https://icons8.com/) for my small food icons
 - ['Faster One' Google Font](https://fonts.google.com/specimen/Faster+One?query=faster+one)
 - [Working with JavaScript Media Queries](https://css-tricks.com/working-with-javascript-media-queries/)
