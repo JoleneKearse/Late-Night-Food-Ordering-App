@@ -1,6 +1,6 @@
 # Late Night Food
 
-Visit the **[Live site]()**!
+🔥 Visit the **[Live Site](https://late-night-food-ordering-app.vercel.app/)**!
 
 <p>
    <img src="https://img.shields.io/badge/HTML5-E34F26.svg?style=for-the-badge&logo=HTML5&logoColor=white" title="HTML5" alt="HTML5">
@@ -13,32 +13,35 @@ Visit the **[Live site]()**!
 
 ![screenshot](screenshots/order-details.gif)
 
-I got the inspiration from **[Scrimba](https://scrimba.com/)**'s **Solo Project** to cap off their **Frontend Developer Career Path**'s **Module 5: Essential JavaScript**.
+I got the inspiration from **[Scrimba](https://scrimba.com/)**'s **Solo Project** to cap off their **Frontend Developer Career Path**'s **Module 5: Essential JavaScript**. For Scrimba Solo Projects, you are given requirements, optional stretch goals and a design, then need to figure it all out yourself.
 
 ![Requirements slide with project example](/screenshots/Scrimba-requirements.png)
 
-## Table of Contents
+<hr>
 
-- [My Motivation](https://github.com/JoleneKearse/Late-Night-Food-Ordering-App#my-motivation)
-- [MVP](https://github.com/JoleneKearse/Late-Night-Food-Ordering-App#mvp)
-- [Design Choices](https://github.com/JoleneKearse/Late-Night-Food-Ordering-App#design-choices)
-- [My Process](https://github.com/JoleneKearse/Late-Night-Food-Ordering-App#my-process)
-  - [Data](https://github.com/JoleneKearse/Late-Night-Food-Ordering-App#data)
-  - [Set up the Header](https://github.com/JoleneKearse/Late-Night-Food-Ordering-App#set-up-the-header)
-  - [Generate the Menu via JavaScript](https://github.com/JoleneKearse/Late-Night-Food-Ordering-App#generate-the-menu-via-javascript)
-  - [Data Attributes](https://github.com/JoleneKearse/Late-Night-Food-Ordering-App#data-attributes)
-  - [Function: `handleAddClick`](https://github.com/JoleneKearse/Late-Night-Food-Ordering-App#function-handleaddclick)
-- [Resources](https://github.com/JoleneKearse/Late-Night-Food-Ordering-App#resources)
+## 📜 Table of Contents
 
-## My Motivation
+- [💪 My Motivation](https://github.com/JoleneKearse/Late-Night-Food-Ordering-App#my-motivation)
+- [🎯 MVP](https://github.com/JoleneKearse/Late-Night-Food-Ordering-App#mvp)
+- [🎨 Design Choices](https://github.com/JoleneKearse/Late-Night-Food-Ordering-App#design-choices)
+- [🔄 My Process](https://github.com/JoleneKearse/Late-Night-Food-Ordering-App#my-process)
+  - [Memory Challengers 🧠]()
+    - [Collapsing Margins]()
+    - [Variables Can Help Us!]()
+    - [Data Attributes]()
+- [🔖 Resources](https://github.com/JoleneKearse/Late-Night-Food-Ordering-App#resources)
 
-[contents](https://github.com/JoleneKearse/Late-Night-Food-Ordering-App#table-of-contents)
+<hr>
 
-It sounded cool, but I'm not really a hamburger kind of girl. 🍔 So I got to thinking... _'What kind of food would make me super excited?'_ 🤔
+## 💪 My Motivation
+
+[Back to Table of Contents](https://github.com/JoleneKearse/Late-Night-Food-Ordering-App#table-of-contents)
+
+The design looked cool, but I'm not really a hamburger 🍔 kind of girl. So I got to thinking... _'What kind of food would make me super excited?'_ 🤔
 
 Well, I miss tons of things from living in China for 15 years... Especially stopping for a chill late night dinner after teaching until 9 p.m., then commuting 1 hour plus back to my neighbourhood. 😅
 
-China has restaurants everywhere and a vibrant late night food scene. Even food stalls on the side of streets open until 5 in the morning!
+China has restaurants everywhere and a vibrant late night food scene. Food stalls on the side of streets stay open until 5 in the morning!
 
 ![bbq skewers, dumplings, fried noodles](/screenshots/street-food.png)
 
@@ -46,9 +49,9 @@ But what about those times you just want to head home with tasty treats? 🥡
 
 In comes my app! 📱 When you're close to home, simply place your order, get into your comfies, and have your late night snack brought to your door!
 
-## MVP
+## 🎯 MVP
 
-[contents](https://github.com/JoleneKearse/Late-Night-Food-Ordering-App#table-of-contents)
+[Back to Table of Contents](https://github.com/JoleneKearse/Late-Night-Food-Ordering-App#table-of-contents)
 
 I had already thrown out the **design spec**, but there were certain things I felt were must haves:
 
@@ -61,56 +64,71 @@ I had already thrown out the **design spec**, but there were certain things I fe
 - Ability to Place Order
 - Payment Modal
 
-## Design Choices
+## ✨ My Stretch Goals
 
-[contents](https://github.com/JoleneKearse/Late-Night-Food-Ordering-App#table-of-contents)
+**Late Night Food** being a Chinese food ordering app got me thinking about the **Payment Modal**...
+
+In China, _everyone_ uses [WeChat](https://www.wechat.com/), which is a **super app** - _like what Elon Musk talks about transforming **Twitter** into_. It's one app to talk with your friends in chat, voice and video, view people's posts and news, play games, and, drum roll 🥁, **make payments**.
+
+So, of course, I had to use WeChat to pay, right?!
+
+I ran into one issue... I coded it **mobile-first** and initially added the method I remember seeing most often - people using their phones to **scan a QR code**. But if they were using their phone to order, what good was a QR code on their phone to scan with said phone? LOL
+
+![tweet about people using their phone to order, being presented with a QR code to scan with the phone they are currently on](screenshots/tweet-about-qrcode.png)
+
+Obviously I had to consider some more features:
+
+- media queries in JavaScript to show the QR code for tablet or desktop, then something else for mobile...
+
+- how to process the order on mobile
+
+- automatically move the focus to the next input box
+
+- simulate the payment being processed (_because I'd already gone this far_)
+
+- randomize the 'processing times' in the payment modal
+
+## 🎨 Design Choices
+
+[Back to Table of Contents](https://github.com/JoleneKearse/Late-Night-Food-Ordering-App#table-of-contents)
 
 Of course this was the most difficult part! 🤣 First up I choose the food images.
 
 I liked how the **Scrimba** design used emojis, but a search didn't yield the variety I wanted...
 
-I considered using **jpg**'s, but decided I wanted a cleaner UI...
+I considered using **jpg**'s, but decided I wanted a **cleaner UI**...
 
 So I searched for icons, and, wow, did [Icons8](https://icons8.com/) really deliver! They had a great free collection and you could even use **CDN**'s!
 
 Then I went on an exhaustive search for Asian-looking Google Fonts. I kept ending up with Chinese-language ones! 🤣 But I really liked **[Faster One](https://fonts.google.com/specimen/Faster+One?query=faster+one)** for the **title** as it suggested speed to me.
 
+![Late Night Food title font](screenshots/faster-one.png)
+
 I also went through multiple **header** images. One where I took my **accent colour** from a Chinese lantern, but I ultimately ended up going with with this cool Chinese roof image.
 
-## My Process
+## 🔄 My Process
 
-[contents](https://github.com/JoleneKearse/Late-Night-Food-Ordering-App#table-of-contents)
+[Back to Table of Contents](https://github.com/JoleneKearse/Late-Night-Food-Ordering-App#table-of-contents)
 
 After cracking the **design process**, which I absolutely love ❤️, but can certainly take up time, I was ready to go! 🏎️
 
-1. ### Data
+I'm breaking this section up into two parts:
 
-[contents](https://github.com/JoleneKearse/Late-Night-Food-Ordering-App#table-of-contents)
+- things I knew but needed reminders about, either through Googling or referring to past projects, &
 
-After, of course, setting up the HTML, this was my first stop. I had to consider which menu items to include. Then which properties I'd add.
+- shiny new things I learned.
 
-![data.js file with Menu Array showing which properties and keys I chose, including name, id, description, price, image, and numberOrdered](/screenshots/data.png)
+### Memory Challenges 🧠
 
-> The numberOrdered property came later, when I considered the logic behind allowing a customer to order more than one of a menu item.
+[Back to Table of Contents](https://github.com/JoleneKearse/Late-Night-Food-Ordering-App#table-of-contents)
 
-2. ## Set up the Header
+#### Collapsing Margins
 
-[contents](https://github.com/JoleneKearse/Late-Night-Food-Ordering-App#table-of-contents)
+[Back to Table of Contents](https://github.com/JoleneKearse/Late-Night-Food-Ordering-App#table-of-contents)
 
-This was the static section of the site, set up in within the HTML file.
+I have been lucky to not have to deal with this much, but maybe too lucky as I had forgotten how to fix it! 😉
 
-i. I set up the container to hold everything in the middle of the page. Then applied the following styles for a **mobile-first** workflow:
-
-```css
-.container {
-  width: min(100%, 90em);
-  margin-inline: auto;
-}
-```
-
-ii. I wanted the `header` to be sufficiently big to hold my `h1` and `tagline` and set the mood for the app, so I set it's height to `12em`.
-
-iii. I _actually_ had to remember how to deal with the **collapsing margin**!
+Originally my header image had a big margin above it. And I couldn't remember what to Google to find the solution. After much, much, _much_ searching I found this fix.
 
 ```css
 .container {
@@ -121,55 +139,41 @@ header {
 }
 ```
 
-3. ## Generate the Menu via JavaScript
+#### Variables Can Help Us!
 
-[contents](https://github.com/JoleneKearse/Late-Night-Food-Ordering-App#table-of-contents)
+[Back to Table of Contents](https://github.com/JoleneKearse/Late-Night-Food-Ordering-App#table-of-contents)
 
-i. I use **semantic HTML** tags as much as possible within that file. So I have a `main` tag to enclose the Menu and Order Details sections.
+After getting the initial `totalPrice` displayed for user's orders, I was a tad puzzled on how to let them order **multiples of menu items**.
 
-ii. I originally set the menu up in a `section` until I remembered all the buttons it would hold! So I went with a `form` tag with and `id` to grab with JavaScript.
+Happily I wasn't completely dense and added a new `numberOrdered` variable to my `menuArr`.
 
-```html
-<form id="menu"></form>
-```
+![data.js file with Menu Array showing which properties and keys I chose, including name, id, description, price, image, and numberOrdered](/screenshots/data.png)
 
-iii. In a first function, I run a `.forEach()` over the `menuArr` from `data.js` to create the HTML. Here I thought about which `div`s & `class`es I'd need for styling purposes. I also included **alt text** for the image using `element.name`, and added `aria-label="Add to cart"` to the button icons.
+This allows a simple expression to be run when generating the Bill.
 
-![get Menu Html function creating the HTML with a for Each and template literals to add data, and returning full HTML](screenshots/menuHTML.png)
+![Multiplying number of specific menu items ordered with their price](screenshots/numberOrdered.png)
 
-iv. I call that the `getMenuHtml` function:
+> The need to use `Number()` tickles my curiousity about **TypeScript** - so much to learn! ❤️
 
-![render Menu function grabs the menu id, sets it's inner HTML to the call of get Menu HTML function](screenshots/renderMenu.png)
+It also made **deleting items** easier as I could just **decrement** them.
 
-v. I style it up. The biggest thing I did was use **CSS Grid** rather than **Flexbox**, my go-to. I wanted it to be more of a table, or, uhm, grid, format, so the content-first layout tool was of less use here.
+![Decrementing the number Ordered variable in the Delete function](screenshots/decrement-numberOrdered.png)
 
-4. ### Data Attributes
+#### Data Attributes
 
-[contents](https://github.com/JoleneKearse/Late-Night-Food-Ordering-App#table-of-contents)
+[Back to Table of Contents](https://github.com/JoleneKearse/Late-Night-Food-Ordering-App#table-of-contents)
 
-I had 7 menu items each with an Add Button, so I thought what a great use for **data attributes**?
+I had settled 7 menu items (_only limited by which images to could easily find with a CDN_) each with an Add Button, so I thought what a great use for **data attributes**?
 
-i. I first put the `data-id` on each button. You can see it's use in the `getMenuHtml` function above on _line 66_. This **customizable** attribute let's you store any data you want.
+I first put the `data-id` on each button. This **customizable** attribute let's you store any data you want, in this case the menu item's id.
 
-ii. I set up the **click event listener** to listen for a click on that particular element.
+I then set up the **click event listener** to listen for a click on that particular element.
 
 ![click event listener for e dot target dot dataset dot id](screenshots/event-listener-add-id.png)
 
-5. ### Function: `handleAddClick`
+## 🔖 Resources
 
-[contents](https://github.com/JoleneKearse/Late-Night-Food-Ordering-App#table-of-contents)
-
-> I experimented with placing the site functions in another file, but found it was much easier to keep them in `index.js` if only for the global `orderArr` variable.
-
-This function gets called whenever the customer clicks the Add Button, as seen above on _line 8_.
-
-i. It uses `.filter()` to search for the matching item's `id` in `menuArr`, and returns it as an object.
-
-ii.
-
-## Resources
-
-[contents](https://github.com/JoleneKearse/Late-Night-Food-Ordering-App#table-of-contents)
+[Back to Table of Contents](https://github.com/JoleneKearse/Late-Night-Food-Ordering-App#table-of-contents)
 
 - [Icons8](https://icons8.com/) for small my food icons
 - ['Faster One' Google Font](https://fonts.google.com/specimen/Faster+One?query=faster+one)
