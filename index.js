@@ -129,11 +129,11 @@ const getPaymentHtml = () => {
       <p class="instructions">Please enter your password.</p>
       <img src="images/wechat-app-icon.png" alt="QR Code" class="pay-icon">
       <div class="password">
-        <input inputmode="numeric" name="password" class="password-input" id="one" min="0" max="9" pattern="\d" oninput="moveFocus('one', 'two')" required>
-        <input inputmode="numeric" name="password" class="password-input" id="two" min="0" max="9" pattern="\d" oninput="moveFocus('two', 'three')" required>
-        <input inputmode="numeric" name="password" class="password-input" id="three" min="0" max="9" pattern="\d" oninput="moveFocus('three', 'four')" required>
-        <input inputmode="numeric" name="password" class="password-input" id="four" min="0" max="9" pattern="\d" oninput="moveFocus('four', 'five')" required>
-        <input inputmode="numeric" name="password" class="password-input" id="five" min="0" max="9" pattern="\d" oninput="moveFocus('five', 'six')" required>
+        <input inputmode="numeric" name="password" class="password-input" id="one" min="0" max="9" pattern="\d" onkeyup="moveFocus('one', 'two')" required>
+        <input inputmode="numeric" name="password" class="password-input" id="two" min="0" max="9" pattern="\d" onkeyup="moveFocus('two', 'three')" required>
+        <input inputmode="numeric" name="password" class="password-input" id="three" min="0" max="9" pattern="\d" onkeyup="moveFocus('three', 'four')" required>
+        <input inputmode="numeric" name="password" class="password-input" id="four" min="0" max="9" pattern="\d" onkeyup="moveFocus('four', 'five')" required>
+        <input inputmode="numeric" name="password" class="password-input" id="five" min="0" max="9" pattern="\d" onkeyup="moveFocus('five', 'six')" required>
         <input inputmode="numeric" name="password" class="password-input" id="six" min="0" max="9" pattern="\d" required>
       </div>
     </div>
