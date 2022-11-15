@@ -161,6 +161,22 @@ function renderPaymentModal(e) {
   e.preventDefault();
   paymentModal.classList.remove("hidden");
   paymentModal.innerHTML = getPaymentHtml();
+  const mediaQuery = window.matchMedia("(min-width: 768px)");
+  if (mediaQuery.matches) {
+    setTimeout(function () {
+      document.querySelector(".payment-modal-display").innerHTML = `
+        <h3>Processing payment...</h3>
+        <img src="images/spinning-circles.svg" alt="" class="spinner">
+      `;
+    }, 3000);
+    setTimeout(function () {
+      document.querySelector(".payment-modal-display").innerHTML = `
+        <h3>Thank you for your order!</h3>
+        <p>Expect your snacks in 15-30 minutes!</p>
+        <img src="https://img.icons8.com/stickers/100/null/delivery-scooter.png" alt="scooter delivery"/>
+       `;
+    }, 6000);
+  }
 }
 
 renderMenu();
