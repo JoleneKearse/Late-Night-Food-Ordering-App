@@ -4,13 +4,6 @@ let orderArr = [];
 const orderSubmit = document.getElementById("order-details");
 const paymentModal = document.getElementById("payment-modal");
 
-// site function that couldn't be hoisted for mysterious reasons
-const renderPaymentModal = (e) => {
-  e.preventDefault();
-  paymentModal.classList.remove("hidden");
-  paymentModal.innerHTML = getPaymentHtml();
-};
-
 // site event listeners
 document.addEventListener("click", (e) => {
   if (e.target.dataset.id) {
@@ -49,6 +42,13 @@ const handleDeleteClick = (itemId) => {
   targetItemObj.numberOrdered--;
   renderOrderDetails();
 };
+
+// automove focus for password input
+function moveFocus(current, next) {
+  if (current.value.length === current.maxLength) {
+    document.getElementById(next).focus();
+  }
+}
 
 // generate dynamic content
 const getMenuHtml = () => {
@@ -129,7 +129,7 @@ const getPaymentHtml = () => {
       <p class="instructions">Please enter your password.</p>
       <img src="images/wechat-app-icon.png" alt="QR Code" class="pay-icon">
       <div class="password">
-        <input inputmode="numeric" name="password" class="password-input" id="one" min="0" max="9" pattern="\d" oninput="moveFocus('one', 'two')" required autofocus>
+        <input inputmode="numeric" name="password" class="password-input" id="one" min="0" max="9" pattern="\d" oninput="moveFocus('one', 'two')" required>
         <input inputmode="numeric" name="password" class="password-input" id="two" min="0" max="9" pattern="\d" oninput="moveFocus('two', 'three')" required>
         <input inputmode="numeric" name="password" class="password-input" id="three" min="0" max="9" pattern="\d" oninput="moveFocus('three', 'four')" required>
         <input inputmode="numeric" name="password" class="password-input" id="four" min="0" max="9" pattern="\d" oninput="moveFocus('four', 'five')" required>
@@ -156,13 +156,11 @@ const renderOrderDetails = () => {
   }
 };
 
-renderMenu();
+// can't use an arrow function here, as needs to be hoisted
+function renderPaymentModal(e) {
+  e.preventDefault();
+  paymentModal.classList.remove("hidden");
+  paymentModal.innerHTML = getPaymentHtml();
+}
 
-// const one = document.getElementById("one");
-// const two = document.getElementById("two");
-// // automove focus for password input
-// function moveFocus(current, next) {
-//   if (current.value.length === current.maxLength) {
-//     document.getElementById(next).focus();
-//   }
-// }
+renderMenu();
