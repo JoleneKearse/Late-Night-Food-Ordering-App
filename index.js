@@ -58,7 +58,7 @@ function moveFocus(current, next) {
   }
 }
 
-// generate a random number for setTimeouts
+// generate a random numbers for setTimeouts
 function firstRandomDelay() {
   return Math.floor(Math.random() * (3000 - 1000 + 1)) + 1000;
 }

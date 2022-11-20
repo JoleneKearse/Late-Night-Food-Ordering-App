@@ -30,6 +30,8 @@ I got the inspiration from **[Scrimba](https://scrimba.com/)**'s **Solo Project*
     - [Collapsing Margins](https://github.com/JoleneKearse/Late-Night-Food-Ordering-App#collapsing-margins)
     - [Variables Can Help Us!](https://github.com/JoleneKearse/Late-Night-Food-Ordering-App#variables-can-help-us)
     - [Data Attributes](https://github.com/JoleneKearse/Late-Night-Food-Ordering-App#data-attributes)
+  - [New Discoveries 🗺️]()
+    - [Random Delays for `setTimeout`]()
 - [🔖 Resources](https://github.com/JoleneKearse/Late-Night-Food-Ordering-App#-resources)
 
 <hr>
@@ -164,13 +166,33 @@ It also made **deleting items** easier as I could just **decrement** them.
 
 [Back to Table of Contents](https://github.com/JoleneKearse/Late-Night-Food-Ordering-App#table-of-contents)
 
-I had settled 7 menu items (_only limited by which images to could easily find with a CDN_) each with an Add Button, so I thought what a great use for **data attributes**?
+I had settled 7 menu items 🥟 (_only limited by which images to could easily find with a CDN_) each with an Add Button, so I thought what a great use for **data attributes**?
 
 I first put the `data-id` on each button. This **customizable** attribute let's you store any data you want, in this case the menu item's id.
 
 I then set up the **click event listener** to listen for a click on that particular element.
 
 ![click event listener for e dot target dot dataset dot id](screenshots/event-listener-add-id.png)
+
+### New Discoveries 🗺️
+
+[Back to Table of Contents](https://github.com/JoleneKearse/Late-Night-Food-Ordering-App#table-of-contents)
+
+#### Random Delays for `setTimeout`
+
+Since I went through the effort of showing WeChat payments, I wanted the **simulate the payment processing**. I have a processing and completed screen.
+
+![Payment processing and thank you screens](screenshots/payment-screens.png)
+
+Originally I had the set to go off at `3000` and `6000` milliseconds a piece, but who wants predictable? 😁
+
+So I wrote up a `randomDelay` function, which led to some weird results like the confirmation appearing before the processing screen!
+
+_What?!?_ Oh, yes, the time delays need to be staggered! 🤦‍♀️
+
+The logical solution was two delay functions:
+
+![Two random Delay functions to allow the second to occur after the first](screenshots/randomDelay.png)
 
 ## 🔖 Resources
 
