@@ -3,6 +3,14 @@ import { menuArr } from "./scripts/data.js";
 let orderArr = [];
 const orderSubmit = document.getElementById("order-details");
 const paymentModal = document.getElementById("payment-modal");
+let paymentHtml = "";
+const mobilePaymentModal = document.getElementById("mobile-payment-modal");
+const one = document.getElementById("one");
+const two = document.getElementById("two");
+const three = document.getElementById("three");
+const four = document.getElementById("four");
+const five = document.getElementById("five");
+const six = document.getElementById("six");
 
 // site event listeners
 document.addEventListener("click", (e) => {
@@ -48,6 +56,15 @@ function moveFocus(current, next) {
   if (current.value.length === current.maxLength) {
     document.getElementById(next).focus();
   }
+}
+
+// generate a random number for setTimeouts
+function firstRandomDelay() {
+  return Math.floor(Math.random() * (3000 - 1000 + 1)) + 1000;
+}
+
+function secondRandomDelay() {
+  return Math.floor(Math.random() * (6000 - 3000 + 1)) + 3000;
 }
 
 // generate dynamic content
@@ -112,32 +129,20 @@ const getOrderHtml = () => {
 };
 
 const getPaymentHtml = () => {
-  const mediaQuery = window.matchMedia("(min-width: 768px)");
+  const mediaQuery = window.matchMedia("(max-width: 768px)");
+
   if (mediaQuery.matches) {
-    let paymentHtml = `
+    console.log(`mobile`);
+    mobilePaymentModal.classList.remove("hidden");
+    // return paymentHtml;
+  } else {
+    paymentHtml = `
     <div class="payment-modal-display">
       <h3>Pay via WeChat</h3>
-      <p class="instructions">Open your app and scan the QR Code to process your payment.</p>
-      <img src="images/QRcode.png" alt="QR Code" class="QRcode">
+      <p id="instructions">Open your app and scan the QR Code to process your payment.</p>
+      <img src="images/QRcode.png" alt="QR Code" class="QRcode" id="pay-img">
     </div>
     `;
-    return paymentHtml;
-  } else {
-    let paymentHtml = `
-    <div class="payment-modal-display">
-      <h3>Pay via WeChat</h3>
-      <p class="instructions">Please enter your password.</p>
-      <img src="images/wechat-app-icon.png" alt="QR Code" class="pay-icon">
-      <div class="password">
-        <input inputmode="numeric" name="password" class="password-input" id="one" min="0" max="9" pattern="\d" onkeyup="moveFocus('one', 'two')" required>
-        <input inputmode="numeric" name="password" class="password-input" id="two" min="0" max="9" pattern="\d" onkeyup="moveFocus('two', 'three')" required>
-        <input inputmode="numeric" name="password" class="password-input" id="three" min="0" max="9" pattern="\d" onkeyup="moveFocus('three', 'four')" required>
-        <input inputmode="numeric" name="password" class="password-input" id="four" min="0" max="9" pattern="\d" onkeyup="moveFocus('four', 'five')" required>
-        <input inputmode="numeric" name="password" class="password-input" id="five" min="0" max="9" pattern="\d" onkeyup="moveFocus('five', 'six')" required>
-        <input inputmode="numeric" name="password" class="password-input" id="six" min="0" max="9" pattern="\d" required>
-      </div>
-    </div>
-  `;
     return paymentHtml;
   }
 };
@@ -148,14 +153,14 @@ const simulatePayment = () => {
         <h3>Processing payment...</h3>
         <img src="images/spinning-circles.svg" alt="" class="spinner">
       `;
-  }, 3000);
+  }, firstRandomDelay());
   setTimeout(function () {
     document.querySelector(".payment-modal-display").innerHTML = `
         <h3>Thank you for your order!</h3>
         <p>Expect your snacks in 15-30 minutes!</p>
-        <img src="https://img.icons8.com/stickers/100/null/delivery-scooter.png" alt="scooter delivery"/>
+        <img src="https://img.icons8.com/stickers/100/null/delivery-scooter.png" class="final-img" alt="scooter delivery"/>
       `;
-  }, 6000);
+  }, secondRandomDelay());
 };
 
 // render to page
@@ -177,13 +182,17 @@ function renderPaymentModal(e) {
   e.preventDefault();
   paymentModal.classList.remove("hidden");
   paymentModal.innerHTML = getPaymentHtml();
-  const mediaQuery = window.matchMedia("(min-width: 768px)");
+  // TODO: Figure out where to add in simulatePayment() for mobile
+  const mediaQuery = window.matchMedia("(max-width: 767px)");
   if (mediaQuery.matches) {
-    simulatePayment();
+    one.addEventListener("keyup", moveFocus(one, two));
+    two.addEventListener("keyup", moveFocus(two, three));
+    three.addEventListener("keyup", moveFocus(three, four));
+    four.addEventListener("keyup", moveFocus(four, five));
+    five.addEventListener("keyup", moveFocus(five, six));
+    six.addEventListener("keyup", simulatePayment);
   } else {
-    // document
-    //   .getElementById("six")
-    //   .addEventListener("onkeyup", simulatePayment());
+    simulatePayment();
   }
 }
 

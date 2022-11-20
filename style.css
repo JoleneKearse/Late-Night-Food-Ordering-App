@@ -245,7 +245,12 @@ h1 {
 
 .QRcode {
   width: 7em;
-  margin-bottom: 2em;
+}
+
+.QRcode,
+.spinner, 
+.final-img {
+  margin-bottom: 1.5em;
 }
 
 /* mobile */

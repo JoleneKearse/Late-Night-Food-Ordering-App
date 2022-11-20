@@ -2,8 +2,7 @@ export const menuArr = [
   {
     name: "Dumplings",
     id: 0,
-    description:
-      "6 dumplings filled with ground pork and your choice of cabbage or corn",
+    description: "6 dumplings filled with ground pork and cabbage or corn",
     price: 8,
     img: "https://img.icons8.com/external-icongeek26-flat-icongeek26/64/null/external-dumplings-fine-dining-icongeek26-flat-icongeek26.png",
     numberOrdered: 0,
@@ -12,7 +11,7 @@ export const menuArr = [
     name: "Fried Noodles",
     id: 1,
     description:
-      "Filling fried, greasy dish full of veggies, chicken and shrimp",
+      "Filling, fried, greasy dish full of veggies, chicken and shrimp",
     price: 10,
     img: "https://img.icons8.com/external-photo3ideastudio-lineal-color-photo3ideastudio/64/null/external-noodles-china-photo3ideastudio-lineal-color-photo3ideastudio.png",
     numberOrdered: 0,
@@ -53,7 +52,7 @@ export const menuArr = [
   {
     name: "Beer",
     id: 6,
-    description: "Big bottle to wash everything down",
+    description: "A nice big bottle to wash everything down",
     price: 2,
     img: "https://img.icons8.com/office/80/null/beer-bottle.png",
     numberOrdered: 0,
