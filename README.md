@@ -31,6 +31,7 @@ I got the inspiration from **[Scrimba](https://scrimba.com/)**'s **Solo Project*
     - [Variables Can Help Us!](https://github.com/JoleneKearse/Late-Night-Food-Ordering-App#variables-can-help-us)
     - [Data Attributes](https://github.com/JoleneKearse/Late-Night-Food-Ordering-App#data-attributes)
   - [New Discoveries 🗺️]()
+    - [`inputmode="numeric"`]()
     - [Random Delays for `setTimeout`]()
 - [🔖 Resources](https://github.com/JoleneKearse/Late-Night-Food-Ordering-App#-resources)
 
@@ -177,6 +178,16 @@ I then set up the **click event listener** to listen for a click on that particu
 ### New Discoveries 🗺️
 
 [Back to Table of Contents](https://github.com/JoleneKearse/Late-Night-Food-Ordering-App#table-of-contents)
+
+#### `inputmode="numeric"`
+
+I did not care for the look of the **spinbuttons** - those up and down arrows next to a number field. These come out of the box when you write: `<input type="number"`. I couldn't remember how to _style them out of the page_, but just a little bit of research led me to `inputmode="numeric"`.
+
+This will still bring up a mobile device's numeric keyboard, but without that pesky spinbutton messing with your design!
+
+Also [MDN](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input/number) notes:
+
+> "The number input type should only be used for **incremental numbers**, especially when spinbutton incrementing and decrementing are helpful to user experience."
 
 #### Random Delays for `setTimeout`
 

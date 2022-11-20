@@ -64,7 +64,7 @@ function firstRandomDelay() {
 }
 
 function secondRandomDelay() {
-  return Math.floor(Math.random() * (6000 - 3000 + 1)) + 3000;
+  return Math.floor(Math.random() * (6750 - 3750 + 1)) + 3750;
 }
 
 // generate dynamic content
