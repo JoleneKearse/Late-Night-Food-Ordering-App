@@ -183,7 +183,7 @@ function renderPaymentModal(e) {
       function () {
         moveFocus(one, two);
       },
-      true
+      false
     );
     // two.addEventListener("keyup", moveFocus(two, three));
     two.addEventListener(
@@ -191,7 +191,7 @@ function renderPaymentModal(e) {
       function () {
         moveFocus(two, one);
       },
-      true
+      false
     );
     // three.addEventListener("keyup", moveFocus(three, four));
     three.addEventListener(
@@ -199,7 +199,7 @@ function renderPaymentModal(e) {
       function () {
         moveFocus(three, four);
       },
-      true
+      false
     );
     // four.addEventListener("keyup", moveFocus(four, five));
     four.addEventListener(
@@ -207,7 +207,7 @@ function renderPaymentModal(e) {
       function () {
         moveFocus(four, five);
       },
-      true
+      false
     );
     // five.addEventListener("keyup", moveFocus(five, six));
     five.addEventListener(
@@ -215,7 +215,7 @@ function renderPaymentModal(e) {
       function () {
         moveFocus(five, six);
       },
-      true
+      false
     );
     six.addEventListener("keyup", simulatePayment);
   } else {
