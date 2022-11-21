@@ -26,6 +26,7 @@ document.addEventListener("click", (e) => {
 });
 
 orderSubmit.addEventListener("submit", renderPaymentModal);
+// one.addEventListener("keyup", moveFocus(one, two));
 
 // site functions
 const handleAddClick = (itemId) => {
@@ -129,25 +130,17 @@ const getOrderHtml = () => {
 };
 
 const getPaymentHtml = () => {
-  const mediaQuery = window.matchMedia("(max-width: 768px)");
-
-  if (mediaQuery.matches) {
-    console.log(`mobile`);
-    mobilePaymentModal.classList.remove("hidden");
-    // return paymentHtml;
-  } else {
-    paymentHtml = `
-    <div class="payment-modal-display">
-      <h3>Pay via WeChat</h3>
-      <p id="instructions">Open your app and scan the QR Code to process your payment.</p>
-      <img src="images/QRcode.png" alt="QR Code" class="QRcode" id="pay-img">
-    </div>
-    `;
-    return paymentHtml;
-  }
+  paymentHtml = `
+  <div class="payment-modal-display">
+    <h3>Pay via WeChat</h3>
+    <p id="instructions">Open your app and scan the QR Code to process your payment.</p>
+    <img src="images/QRcode.png" alt="QR Code" class="QRcode" id="pay-img">
+  </div>
+  `;
+  return paymentHtml;
 };
 
-const simulatePayment = () => {
+function simulatePayment() {
   setTimeout(function () {
     document.querySelector(".payment-modal-display").innerHTML = `
         <h3>Processing payment...</h3>
@@ -161,7 +154,7 @@ const simulatePayment = () => {
         <img src="https://img.icons8.com/stickers/100/null/delivery-scooter.png" class="final-img" alt="scooter delivery"/>
       `;
   }, secondRandomDelay());
-};
+}
 
 // render to page
 const renderMenu = () => {
@@ -181,17 +174,52 @@ const renderOrderDetails = () => {
 function renderPaymentModal(e) {
   e.preventDefault();
   paymentModal.classList.remove("hidden");
-  paymentModal.innerHTML = getPaymentHtml();
-  // TODO: Figure out where to add in simulatePayment() for mobile
   const mediaQuery = window.matchMedia("(max-width: 767px)");
   if (mediaQuery.matches) {
-    one.addEventListener("keyup", moveFocus(one, two));
-    two.addEventListener("keyup", moveFocus(two, three));
-    three.addEventListener("keyup", moveFocus(three, four));
-    four.addEventListener("keyup", moveFocus(four, five));
-    five.addEventListener("keyup", moveFocus(five, six));
+    mobilePaymentModal.classList.remove("hidden");
+    // one.addEventListener("keyup", moveFocus(one, two));
+    one.addEventListener(
+      "keyup",
+      function () {
+        moveFocus(one, two);
+      },
+      true
+    );
+    // two.addEventListener("keyup", moveFocus(two, three));
+    two.addEventListener(
+      "keyup",
+      function () {
+        moveFocus(two, one);
+      },
+      true
+    );
+    // three.addEventListener("keyup", moveFocus(three, four));
+    three.addEventListener(
+      "keyup",
+      function () {
+        moveFocus(three, four);
+      },
+      true
+    );
+    // four.addEventListener("keyup", moveFocus(four, five));
+    four.addEventListener(
+      "keyup",
+      function () {
+        moveFocus(four, five);
+      },
+      true
+    );
+    // five.addEventListener("keyup", moveFocus(five, six));
+    five.addEventListener(
+      "keyup",
+      function () {
+        moveFocus(five, six);
+      },
+      true
+    );
     six.addEventListener("keyup", simulatePayment);
   } else {
+    paymentModal.innerHTML = getPaymentHtml();
     simulatePayment();
   }
 }
