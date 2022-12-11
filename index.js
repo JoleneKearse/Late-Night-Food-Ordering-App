@@ -52,13 +52,6 @@ const handleDeleteClick = (itemId) => {
   renderOrderDetails();
 };
 
-// automove focus for password input
-function moveFocus(current, next) {
-  if (current.value.length === current.maxLength) {
-    document.getElementById(next).focus();
-  }
-}
-
 // generate a random numbers for setTimeouts
 function firstRandomDelay() {
   return Math.floor(Math.random() * (3000 - 1000 + 1)) + 1000;
@@ -177,46 +170,22 @@ function renderPaymentModal(e) {
   const mediaQuery = window.matchMedia("(max-width: 767px)");
   if (mediaQuery.matches) {
     mobilePaymentModal.classList.remove("hidden");
-    // one.addEventListener("keyup", moveFocus(one, two));
-    one.addEventListener(
-      "keyup",
-      function () {
-        moveFocus(one, two);
-      },
-      false
-    );
-    // two.addEventListener("keyup", moveFocus(two, three));
-    two.addEventListener(
-      "keyup",
-      function () {
-        moveFocus(two, one);
-      },
-      false
-    );
-    // three.addEventListener("keyup", moveFocus(three, four));
-    three.addEventListener(
-      "keyup",
-      function () {
-        moveFocus(three, four);
-      },
-      false
-    );
-    // four.addEventListener("keyup", moveFocus(four, five));
-    four.addEventListener(
-      "keyup",
-      function () {
-        moveFocus(four, five);
-      },
-      false
-    );
-    // five.addEventListener("keyup", moveFocus(five, six));
-    five.addEventListener(
-      "keyup",
-      function () {
-        moveFocus(five, six);
-      },
-      false
-    );
+    // move focus to next input box on keyup
+    one.addEventListener("keyup", function () {
+      two.focus();
+    });
+    two.addEventListener("keyup", function () {
+      three.focus();
+    });
+    three.addEventListener("keyup", function () {
+      four.focus();
+    });
+    four.addEventListener("keyup", function () {
+      five.focus();
+    });
+    five.addEventListener("keyup", function () {
+      six.focus();
+    });
     six.addEventListener("keyup", simulatePayment);
   } else {
     paymentModal.innerHTML = getPaymentHtml();
