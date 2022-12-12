@@ -30,9 +30,9 @@ I got the inspiration from **[Scrimba](https://scrimba.com/)**'s **Solo Project*
     - [Collapsing Margins](https://github.com/JoleneKearse/Late-Night-Food-Ordering-App#collapsing-margins)
     - [Variables Can Help Us!](https://github.com/JoleneKearse/Late-Night-Food-Ordering-App#variables-can-help-us)
     - [Data Attributes](https://github.com/JoleneKearse/Late-Night-Food-Ordering-App#data-attributes)
-  - [New Discoveries 🗺️]()
-    - [`inputmode="numeric"`]()
-    - [Random Delays for `setTimeout`]()
+  - [New Discoveries 🗺️](https://github.com/JoleneKearse/Late-Night-Food-Ordering-App#new-discoveries-%EF%B8%8F)
+    - [`inputmode="numeric"`](https://github.com/JoleneKearse/Late-Night-Food-Ordering-App#inputmodenumeric)
+    - [Random Delays for `setTimeout`](https://github.com/JoleneKearse/Late-Night-Food-Ordering-App#random-delays-for-settimeout)
 - [🔖 Resources](https://github.com/JoleneKearse/Late-Night-Food-Ordering-App#-resources)
 
 <hr>
@@ -128,7 +128,7 @@ I'm breaking this section up into two parts:
 
 #### Collapsing Margins
 
-[Back to Table of Contents](https://github.com/JoleneKearse/Late-Night-Food-Ordering-App#table-of-contents)
+[Back to Table of Contents](https://github.com/JoleneKearse/Late-Night-Food-Ordering-App#-table-of-contents)
 
 I have been lucky to not have to deal with this much, but maybe too lucky as I had forgotten how to fix it! 😉
 
@@ -145,7 +145,7 @@ header {
 
 #### Variables Can Help Us!
 
-[Back to Table of Contents](https://github.com/JoleneKearse/Late-Night-Food-Ordering-App#table-of-contents)
+[Back to Table of Contents](https://github.com/JoleneKearse/Late-Night-Food-Ordering-App#-table-of-contents)
 
 After getting the initial `totalPrice` displayed for user's orders, I was a tad puzzled on how to let them order **multiples of menu items**.
 
@@ -165,9 +165,9 @@ It also made **deleting items** easier as I could just **decrement** them.
 
 #### Data Attributes
 
-[Back to Table of Contents](https://github.com/JoleneKearse/Late-Night-Food-Ordering-App#table-of-contents)
+[Back to Table of Contents](https://github.com/JoleneKearse/Late-Night-Food-Ordering-App#-table-of-contents)
 
-I had settled 7 menu items 🥟 (_only limited by which images to could easily find with a CDN_) each with an Add Button, so I thought what a great use for **data attributes**?
+I had settled 7 menu items 🥟 (_only limited by which images to could easily find with a CDN_) each with an Add Button, so I thought what a great use for **data attributes**!
 
 I first put the `data-id` on each button. This **customizable** attribute let's you store any data you want, in this case the menu item's id.
 
@@ -177,7 +177,7 @@ I then set up the **click event listener** to listen for a click on that particu
 
 ### New Discoveries 🗺️
 
-[Back to Table of Contents](https://github.com/JoleneKearse/Late-Night-Food-Ordering-App#table-of-contents)
+[Back to Table of Contents](https://github.com/JoleneKearse/Late-Night-Food-Ordering-App#-table-of-contents)
 
 #### `inputmode="numeric"`
 
@@ -191,7 +191,7 @@ Also [MDN](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input/numbe
 
 #### Random Delays for `setTimeout`
 
-Since I went through the effort of showing WeChat payments, I wanted the **simulate the payment processing**. I have a processing and completed screen.
+Since I went through the effort of showing WeChat payments, I wanted to **simulate the payment processing**. I have a processing and completed screen.
 
 ![Payment processing and thank you screens](screenshots/payment-screens.png)
 
