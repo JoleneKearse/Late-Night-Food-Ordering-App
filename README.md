@@ -205,6 +205,16 @@ The logical solution was two delay functions:
 
 ![Two random Delay functions to allow the second to occur after the first](screenshots/randomDelay.png)
 
+#### Automatically Moving to the Next Input Box
+
+This was my nemesis! 🤯 Although I completed all my MVP's and nearly all my stretch goals, I could not call this project complete until I got this to obey!
+
+With a little research, I found WeChat uses a 6-digit password to pay on mobile (rather than a QR code to scan). I styled up this realistic interface and it was working.
+
+![Beautiful password input where each number has it's own box]()
+
+But I couldn't tolerate making my hypothetical users manually move to the next input box - _the horror, right?!_
+
 ## 🔖 Resources
 
 [Back to Table of Contents](https://github.com/JoleneKearse/Late-Night-Food-Ordering-App#table-of-contents)
