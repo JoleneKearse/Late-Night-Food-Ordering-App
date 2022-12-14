@@ -207,13 +207,17 @@ The logical solution was two delay functions:
 
 #### Automatically Moving to the Next Input Box
 
-This was my nemesis! 🤯 Although I completed all my MVP's and nearly all my stretch goals, I could not call this project complete until I got this to obey!
+This was my nemesis! 🤯 Although I completed the MVP's and nearly all my stretch goals, I could not call this project complete until I got this to obey!
 
-With a little research, I found WeChat uses a 6-digit password to pay on mobile (rather than a QR code to scan). I styled up this realistic interface and it was working.
+With a little research, I found WeChat uses a 6-digit password to pay on mobile (rather than a QR code to scan). I styled up this realistic interface and it was working completely fine.
 
 ![Beautiful password input where each number has it's own box]()
 
-But I couldn't tolerate making my hypothetical users manually move to the next input box - _the horror, right?!_
+But I couldn't tolerate my hypothetical users manually moving the cursor to the next input box - _the horror, right?!_ In all seriousness, I wanted a better UX, where the focus would automatically move to the next input field.
+
+I spent so long on this one feature. I Googled, tried solutions, got it up and running on Codepen, asked questions on Discord, showed a fellow dev... All for nada.
+
+As often happens, other commitments came up, so I put it to bed for 2-3 weeks. Then approached it with fresh eyes, and voila I got it! All I needed to do was use `.focus()` to send it to the next element!
 
 ## 🔖 Resources
 
