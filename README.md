@@ -219,6 +219,8 @@ I spent so long on this one feature. I Googled, tried solutions, got it up and r
 
 As often happens, other commitments came up, so I put it to bed for 2-3 weeks. Then approached it with fresh eyes, and voila I got it! All I needed to do was use `.focus()` to send it to the next element!
 
+![keyup event listener on each input field using focus to move it to the next element]()
+
 ## 🔖 Resources
 
 [Back to Table of Contents](https://github.com/JoleneKearse/Late-Night-Food-Ordering-App#table-of-contents)
