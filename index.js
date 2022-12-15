@@ -73,7 +73,7 @@ const getMenuHtml = () => {
         <p>${element.description}</p>
       </div>
       <div class="menu-item-controls">
-        <i class="fa-solid fa-plus add-btn" data-id="${element.id}" title="Add to cart" aria-label="Add to cart"></i>
+        <i class="fa-solid fa-plus add-btn" data-id="${element.id}" title="Add to cart" tabindex="0" role="button" aria-label="Add to cart"></i>
         <p class="price">$${element.price}</p>
       </div>
     </div>
@@ -97,10 +97,10 @@ const getOrderHtml = () => {
           <div class="order-item-dets">
             <p>${item.name}</p>
             <p class="number-ordered">x ${item.numberOrdered}</p>
-            <i class="fa-solid fa-plus add-btn" title="Add another!" aria-label="Add another!" data-add="${
+            <i class="fa-solid fa-plus add-btn" tabindex="0" title="Add another!" role="button" aria-label="Add another!" data-add="${
               item.id
             }"></i>
-            <i class="fa-sharp fa-solid fa-delete-left delete-btn" title="Remove" aria-label="Remove item" data-remove="${
+            <i class="fa-sharp fa-solid fa-delete-left delete-btn" tabindex="0" role="button" title="Remove" aria-label="Remove item" data-remove="${
               item.id
             }"></i>
           </div>
@@ -117,7 +117,7 @@ const getOrderHtml = () => {
   });
   orderDetailsHtml += `
     <p class ="total">Total  <span class="total-price">$${totalPrice}</span></p>
-    <button class="order-btn" title="Order your yummy treats!" aria-label="Place order">Place Order</button>
+    <button class="order-btn" tabindex="0" role="button" title="Order your yummy treats!" aria-label="Place order">Place Order</button>
   `;
   return orderDetailsHtml;
 };
