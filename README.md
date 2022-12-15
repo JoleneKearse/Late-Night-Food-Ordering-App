@@ -33,13 +33,14 @@ I got the inspiration from **[Scrimba](https://scrimba.com/)**'s **Solo Project*
   - [New Discoveries 🗺️](https://github.com/JoleneKearse/Late-Night-Food-Ordering-App#new-discoveries-%EF%B8%8F)
     - [`inputmode="numeric"`](https://github.com/JoleneKearse/Late-Night-Food-Ordering-App#inputmodenumeric)
     - [Random Delays for `setTimeout`](https://github.com/JoleneKearse/Late-Night-Food-Ordering-App#random-delays-for-settimeout)
+    - [Automatically Moving to the Next Input Box]()
 - [🔖 Resources](https://github.com/JoleneKearse/Late-Night-Food-Ordering-App#-resources)
 
 <hr>
 
 ## 💪 My Motivation
 
-[Back to Table of Contents](https://github.com/JoleneKearse/Late-Night-Food-Ordering-App#table-of-contents)
+[Back to Table of Contents](https://github.com/JoleneKearse/Late-Night-Food-Ordering-App#-table-of-contents)
 
 The design looked cool, but I'm not really a hamburger 🍔 kind of girl. So I got to thinking... _'What kind of food would make me super excited?'_ 🤔
 
@@ -55,7 +56,7 @@ In comes my app! 📱 When you're close to home, simply place your order, get in
 
 ## 🎯 MVP
 
-[Back to Table of Contents](https://github.com/JoleneKearse/Late-Night-Food-Ordering-App#table-of-contents)
+[Back to Table of Contents](https://github.com/JoleneKearse/Late-Night-Food-Ordering-App#-table-of-contents)
 
 I had already thrown out the **design spec**, but there were certain things I felt were must haves:
 
@@ -69,6 +70,8 @@ I had already thrown out the **design spec**, but there were certain things I fe
 - Payment Modal
 
 ## ✨ My Stretch Goals
+
+[Back to Table of Contents](https://github.com/JoleneKearse/Late-Night-Food-Ordering-App#-table-of-contents)
 
 **Late Night Food** being a Chinese food ordering app got me thinking about the **Payment Modal**...
 
@@ -94,7 +97,7 @@ Obviously I had to consider some more features:
 
 ## 🎨 Design Choices
 
-[Back to Table of Contents](https://github.com/JoleneKearse/Late-Night-Food-Ordering-App#table-of-contents)
+[Back to Table of Contents](https://github.com/JoleneKearse/Late-Night-Food-Ordering-App#-table-of-contents)
 
 Of course this was the most difficult part! 🤣 First up I choose the food images.
 
@@ -112,7 +115,7 @@ I also went through multiple **header** images. One where I took my **accent col
 
 ## 🔄 My Process
 
-[Back to Table of Contents](https://github.com/JoleneKearse/Late-Night-Food-Ordering-App#table-of-contents)
+[Back to Table of Contents](https://github.com/JoleneKearse/Late-Night-Food-Ordering-App#-table-of-contents)
 
 After cracking the **design process**, which I absolutely love ❤️, but can certainly take up time, I was ready to go! 🏎️
 
@@ -124,7 +127,7 @@ I'm breaking this section up into two parts:
 
 ### Memory Challenges 🧠
 
-[Back to Table of Contents](https://github.com/JoleneKearse/Late-Night-Food-Ordering-App#table-of-contents)
+[Back to Table of Contents](https://github.com/JoleneKearse/Late-Night-Food-Ordering-App#-table-of-contents)
 
 #### Collapsing Margins
 
@@ -191,6 +194,8 @@ Also [MDN](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input/numbe
 
 #### Random Delays for `setTimeout`
 
+[Back to Table of Contents](https://github.com/JoleneKearse/Late-Night-Food-Ordering-App#-table-of-contents)
+
 Since I went through the effort of showing WeChat payments, I wanted to **simulate the payment processing**. I have a processing and completed screen.
 
 ![Payment processing and thank you screens](screenshots/payment-screens.png)
@@ -207,11 +212,13 @@ The logical solution was two delay functions:
 
 #### Automatically Moving to the Next Input Box
 
+[Back to Table of Contents](https://github.com/JoleneKearse/Late-Night-Food-Ordering-App#-table-of-contents)
+
 This was my nemesis! 🤯 Although I completed the MVP's and nearly all my stretch goals, I could not call this project complete until I got this to obey!
 
 With a little research, I found WeChat uses a 6-digit password to pay on mobile (rather than a QR code to scan). I styled up this realistic interface and it was working completely fine.
 
-![Beautiful password input where each number has it's own box]()
+![Beautiful password input where each number has it's own box](https://github.com/JoleneKearse/Late-Night-Food-Ordering-App/blob/main/screenshots/mobile-password.png)
 
 But I couldn't tolerate my hypothetical users manually moving the cursor to the next input box - _the horror, right?!_ In all seriousness, I wanted a better UX, where the focus would automatically move to the next input field.
 
@@ -219,12 +226,13 @@ I spent so long on this one feature. I Googled, tried solutions, got it up and r
 
 As often happens, other commitments came up, so I put it to bed for 2-3 weeks. Then approached it with fresh eyes, and voila I got it! All I needed to do was use `.focus()` to send it to the next element!
 
-![keyup event listener on each input field using focus to move it to the next element]()
+![keyup event listener on each input field using focus to move it to the next element](https://github.com/JoleneKearse/Late-Night-Food-Ordering-App/blob/main/screenshots/focus.png)
 
 ## 🔖 Resources
 
-[Back to Table of Contents](https://github.com/JoleneKearse/Late-Night-Food-Ordering-App#table-of-contents)
+[Back to Table of Contents](https://github.com/JoleneKearse/Late-Night-Food-Ordering-App#-table-of-contents)
 
 - [Icons8](https://icons8.com/) for my small food icons
 - ['Faster One' Google Font](https://fonts.google.com/specimen/Faster+One?query=faster+one)
 - [Working with JavaScript Media Queries](https://css-tricks.com/working-with-javascript-media-queries/)
+- [Focus](https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement/focus)
