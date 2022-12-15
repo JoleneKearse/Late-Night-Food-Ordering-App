@@ -13,7 +13,7 @@
 
 ![screenshot](screenshots/order-details.gif)
 
-I got the inspiration from **[Scrimba](https://scrimba.com/)**'s **Solo Project** to cap off their **Frontend Developer Career Path**'s **Module 5: Essential JavaScript**. For Scrimba Solo Projects, you are given requirements, optional stretch goals and a design, then need to figure it all out yourself.
+I got the inspiration from **[Scrimba](https://scrimba.com/)**'s **Solo Project** to cap off their **Frontend Developer Career Path**'s **Module 5: Essential JavaScript**. For Scrimba Solo Projects, you are given requirements, optional stretch goals and a design, then you need to figure it all out yourself.
 
 ![Requirements slide with project example](/screenshots/Scrimba-requirements.png)
 
@@ -222,7 +222,7 @@ With a little research, I found WeChat uses a 6-digit password to pay on mobile 
 
 But I couldn't tolerate my hypothetical users manually moving the cursor to the next input box - _the horror, right?!_ In all seriousness, I wanted a better UX, where the focus would automatically move to the next input field.
 
-I spent so long on this one feature. I Googled, tried solutions, got it up and running on Codepen, asked questions on Discord, showed a fellow dev... All for nada.
+I spent so long on this one feature. I Googled, tried solutions, got it up and running on [Codepen](https://codepen.io/EnglishWithJolene/pen/dyKRQaV), asked questions on Discord, showed a fellow dev... All for nada.
 
 As often happens, other commitments came up, so I put it to bed for 2-3 weeks. Then approached it with fresh eyes, and voila I got it! All I needed to do was use `.focus()` to send it to the next element!
 
