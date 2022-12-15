@@ -42,6 +42,7 @@ header,
 }
 
 h1 {
+  margin: 0;
   font-family: 'Faster One', cursive;
   font-size: clamp(2.5rem, 1.3750rem + 5.0000vw, 4rem);
   letter-spacing: .5rem;
@@ -50,6 +51,7 @@ h1 {
 
 .tagline {
   display: inline;
+  margin-top: 0;
   padding: .25rem;
 }
 
@@ -103,7 +105,6 @@ h3 {
   border-radius: .25rem;
 }
 
-
 /* hover/focus effects */
 .fa-plus:hover,
 .fa-plus:focus {
@@ -139,6 +140,10 @@ body {
 }
 
 header {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
   height: 12em;
   margin-top: 0;
   padding: 1px;
