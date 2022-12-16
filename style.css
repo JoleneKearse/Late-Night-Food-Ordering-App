@@ -292,3 +292,9 @@ h1 {
     width: 20em;
   }
 }
+
+@media (max-width: 400px) {
+  .order-line {
+    width: 95%;
+  }
+}
